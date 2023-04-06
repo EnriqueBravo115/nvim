@@ -39,7 +39,6 @@ return require('packer').startup(function(use)
   use "nvim-tree/nvim-tree.lua"
   use "nvim-tree/nvim-web-devicons"
   use "nvim-lualine/lualine.nvim"
-  use "lukas-reineke/indent-blankline.nvim"
   use "lewis6991/gitsigns.nvim"
   use "jose-elias-alvarez/null-ls.nvim"
   use { "windwp/nvim-autopairs", config = function() require("nvim-autopairs").setup {} end }
@@ -59,4 +58,18 @@ return require('packer').startup(function(use)
   }
 
   use "mfussenegger/nvim-jdtls"
+  use {
+    'vimwiki/vimwiki',
+    config = function()
+      vim.g.vimwiki_list = {
+        {
+          path = '~/vimwiki/',
+          syntax = 'markdown',
+          ext = '.md',
+        }
+      }
+    end
+  }
+
+  use "folke/tokyonight.nvim"
 end)

@@ -19,9 +19,10 @@ require('lualine').setup {
   },
   sections = {
     lualine_a = { 'mode' },
-    lualine_b = { { 'branch', icon = '' }, { 'diff' }, { 'diagnostics' } },
+    lualine_b = { { 'branch', icon = 'ξ' }, { 'diff', symbols = { added = '喜', modified = '电', removed = '猫' } },
+      { 'diagnostics' } },
     lualine_c = { 'filename' },
-    lualine_x = { { 'fileformat', symbols = { unix = '' } }, { 'filetype' } },
+    lualine_x = { { 'fileformat', symbols = { unix = '☯' } }, { 'filetype' } },
     lualine_y = { 'progress' },
     lualine_z = { 'location' }
   },

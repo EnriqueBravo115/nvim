@@ -20,7 +20,6 @@ lsp.configure('lua-language-server', {
   }
 })
 
-
 local cmp = require('cmp')
 local cmp_select = { behavior = cmp.SelectBehavior.Select }
 local cmp_mappings = lsp.defaults.cmp_mappings({
@@ -47,10 +46,10 @@ cmp.setup {
 lsp.set_preferences({
   suggest_lsp_servers = false,
   sign_icons = {
-    error = '禁',
-    warn = '意',
-    hint = '警',
-    info = '紧'
+    error = '',
+    warn = '',
+    hint = '󰋼',
+    info = ''
   }
 })
 
