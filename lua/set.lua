@@ -26,11 +26,4 @@ vim.opt.signcolumn = "yes"
 
 vim.opt.updatetime = 50
 
--- Modo normal
-vim.cmd('highlight CursorNormal guibg=red')
-
--- Modo insertar
-vim.cmd('highlight CursorInsert guibg=green')
-
--- Modo visual
-vim.cmd('highlight CursorVisual guibg=blue')
+--vim.opt.colorcolumn = "80"

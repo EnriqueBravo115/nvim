@@ -1,16 +1,9 @@
 require('lualine').setup {
     options = {
-        icons_enabled = true,
         theme = 'auto',
         component_separators = '',
         section_separators = { left = '', right = '' },
-        disabled_filetypes = {
-            statusline = {},
-            winbar = {},
-        },
-        ignore_focus = {},
-        always_divide_middle = true,
-        globalstatus = false,
+        always_divide_middle = false,
         refresh = {
             statusline = 1000,
             tabline = 1000,
@@ -18,24 +11,15 @@ require('lualine').setup {
         }
     },
     sections = {
-        lualine_a = { 'mode' },
-        lualine_b = { { 'branch', icon = 'ξ' }, { 'diff', symbols = { added = '喜', modified = '要', removed = '猫' } },
-            { 'diagnostics' } },
+        lualine_a = { { 'mode', icon = '' } },
+        lualine_b = {
+            { 'branch', icon = 'ψ' },
+            { 'diff',   symbols = { added = '+', modified = '~', removed = '-' } } },
         lualine_c = { 'filename' },
-        lualine_x = { { 'fileformat', symbols = { unix = '☯' } }, { 'filetype' } },
-        lualine_y = { 'progress' },
-        lualine_z = { { 'datetime', style = "%H:%M" } }
-    },
-    inactive_sections = {
-        lualine_a = {},
-        lualine_b = {},
-        lualine_c = { 'filename' },
-        lualine_x = { 'location' },
+        lualine_x = { { 'diagnostics' },
+            { 'filetype' },
+            { 'fileformat', symbols = { unix = '🍲' } } },
         lualine_y = {},
         lualine_z = {}
     },
-    tabline = {},
-    winbar = {},
-    inactive_winbar = {},
-    extensions = {}
 }

@@ -7,19 +7,19 @@ lsp.ensure_installed({
     'rust_analyzer',
 })
 
---require('lspconfig').pylsp.setup {
---    settings = {
---        plugins {
---            pylsp = {
---                jedi_hover = { enabled = true },
---                jedi_references = { enabled = true },
---                jedi_signature_help = { enabled = true },
---                jedi_symbols = { enabled = true, all_scopes = true },
---            }
---
---        }
---    }
---}
+require 'lspconfig'.pylsp.setup {
+    settings = {
+        pylsp = {
+            plugins = {
+                pylsp = {
+                    jedi_hover = { enabled = true },
+                    jedi_references = { enabled = true },
+                    jedi_signature_help = { enabled = true },
+                },
+            }
+        }
+    }
+}
 
 require 'lspconfig'.angularls.setup {}
 
@@ -43,9 +43,6 @@ local cmp_mappings = lsp.defaults.cmp_mappings({
     ["<C-Space>"] = cmp.mapping.complete(),
 })
 
-cmp_mappings['<Tab>'] = nil
-cmp_mappings['<S-Tab>'] = nil
-
 lsp.setup_nvim_cmp({
     mapping = cmp_mappings
 })
@@ -64,10 +61,10 @@ cmp.setup({
 lsp.set_preferences({
     suggest_lsp_servers = false,
     sign_icons = {
-        error = '',
-        warn = '',
-        hint = '󰋼',
-        info = ''
+        error = 'ε',
+        warn = 'ω',
+        hint = 'ħ',
+        info = 'ĩ'
     }
 })
 
@@ -92,5 +89,5 @@ end)
 lsp.setup()
 
 vim.diagnostic.config({
-    virtual_text = true
+    virtual_text = false
 })
