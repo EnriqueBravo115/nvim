@@ -11,9 +11,10 @@ return require('packer').startup(function(use)
     use "nvim-lualine/lualine.nvim"
     use "lewis6991/gitsigns.nvim"
     use "folke/zen-mode.nvim"
+    use 'christoomey/vim-tmux-navigator'
 
     use { "kristijanhusak/vim-dadbod-ui", requires = { "tpope/vim-dadbod", "tpope/vim-dotenv" } }
-    --   use { "windwp/nvim-autopairs", config = function() require("nvim-autopairs").setup {} end }
+    use { "windwp/nvim-autopairs", config = function() require("nvim-autopairs").setup {} end }
     use {
         "phaazon/hop.nvim",
         event = "BufRead",
@@ -31,14 +32,15 @@ return require('packer').startup(function(use)
     use { "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } }
     use "jose-elias-alvarez/null-ls.nvim"
 
-    use "mfussenegger/nvim-jdtls"
     use { "scalameta/nvim-metals", requires = { "nvim-lua/plenary.nvim", "mfussenegger/nvim-dap" } }
+
+    use "mfussenegger/nvim-jdtls"
+
 
     use "Olical/conjure"
     use "radenling/vim-dispatch-neovim"
     use "clojure-vim/vim-jack-in"
     use "tpope/vim-dispatch"
-
 
     use({
         "hrsh7th/nvim-cmp",
@@ -70,7 +72,6 @@ return require('packer').startup(function(use)
             { 'VonHeikemen/lsp-zero.nvim' }
         }
     }
-
     -- THEMES
     use "EdenEast/nightfox.nvim"
     use "rose-pine/neovim"
