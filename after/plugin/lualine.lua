@@ -6,21 +6,22 @@ local colors = {
     white  = '#C8C093',
     red    = '#ff5189',
     violet = '#d183e8',
-    grey   = '#363646',
-    k1     = '#2A2A37',
+    grey   = '#254147',
+    k1     = '#0f1c1e',
     k2     = '#F6AE2D',
-    k3     = '#98BB6C',
-    k4     = '#957FB8'
+    k3     = '#cbd9d8',
+    k4     = '#587b7b',
+    k5     = '#587b7b'
 }
 
 local bubbles_theme = {
     normal = {
-        a = { fg = colors.black, bg = colors.k2 },
+        a = { fg = colors.black, bg = colors.k5 },
         b = { fg = colors.white, bg = colors.grey },
         c = { fg = colors.k4, bg = colors.k1 },
     },
     insert = { a = { fg = colors.black, bg = colors.k3 } },
-    visual = { a = { fg = colors.black, bg = colors.violet } },
+    visual = { a = { fg = colors.black, bg = colors.k2 } },
     replace = { a = { fg = colors.black, bg = colors.red } },
     inactive = {
         a = { fg = colors.k4, bg = colors.k1 },
@@ -50,7 +51,7 @@ require('lualine').setup {
         lualine_x = {
             { 'filetype',   icon_only = false },
             { 'diagnostics' },
-            { 'fileformat', symbols = { unix = '' } },
+            { 'fileformat', symbols = { unix = '🍖' } },
             { 'location' },
         },
         lualine_y = {},

@@ -11,7 +11,11 @@ return require('packer').startup(function(use)
     use "nvim-lualine/lualine.nvim"
     use "lewis6991/gitsigns.nvim"
     use "folke/zen-mode.nvim"
-    use 'christoomey/vim-tmux-navigator'
+    use { 'TimUntersberger/neogit', requires = 'nvim-lua/plenary.nvim' }
+    use { 'nvim-orgmode/orgmode', config = function()
+        require('orgmode').setup {}
+    end
+    }
 
     use { "kristijanhusak/vim-dadbod-ui", requires = { "tpope/vim-dadbod", "tpope/vim-dotenv" } }
     use { "windwp/nvim-autopairs", config = function() require("nvim-autopairs").setup {} end }
@@ -27,6 +31,7 @@ return require('packer').startup(function(use)
 
     -- LANG
     use { 'nvim-telescope/telescope.nvim', tag = '0.1.0', requires = { { 'nvim-lua/plenary.nvim' } } }
+    use "nvim-telescope/telescope-dap.nvim"
     use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
     use "nvim-treesitter/nvim-treesitter-context"
     use { "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } }
@@ -36,6 +41,9 @@ return require('packer').startup(function(use)
 
     use "mfussenegger/nvim-jdtls"
 
+    use "Pocco81/DAPInstall.nvim"
+
+    use "akinsho/flutter-tools.nvim"
 
     use "Olical/conjure"
     use "radenling/vim-dispatch-neovim"
@@ -51,25 +59,26 @@ return require('packer').startup(function(use)
         },
     })
 
+    use 'rcarriga/cmp-dap'
+
     use {
         'VonHeikemen/lsp-zero.nvim',
-        branch = 'v1.x',
+        branch = 'v2.x',
         requires = {
-            { 'neovim/nvim-lspconfig' },
-            { 'williamboman/mason.nvim' },
-            { 'williamboman/mason-lspconfig.nvim' },
+            { 'neovim/nvim-lspconfig' }, -- Required
+            {
+                'williamboman/mason.nvim',
+                run = function()
+                    pcall(vim.cmd, 'MasonUpdate')
+                end,
+            },
+            { 'williamboman/mason-lspconfig.nvim' }, -- Optional
 
-            { 'hrsh7th/nvim-cmp' },
-            { 'hrsh7th/cmp-buffer' },
-            { 'hrsh7th/cmp-path' },
-            { 'saadparwaiz1/cmp_luasnip' },
-            { 'hrsh7th/cmp-nvim-lsp' },
-            { 'hrsh7th/cmp-nvim-lua' },
-
-            { 'L3MON4D3/LuaSnip' },
-            { 'rafamadriz/friendly-snippets' },
-            { 'onsails/lspkind.nvim' },
-            { 'VonHeikemen/lsp-zero.nvim' }
+            -- Autocompletion
+            { 'hrsh7th/nvim-cmp' },     -- Required
+            { 'hrsh7th/cmp-nvim-lsp' }, -- Required
+            { 'L3MON4D3/LuaSnip' },     -- Required
+            { 'onsails/lspkind.nvim' }
         }
     }
     -- THEMES
@@ -77,10 +86,8 @@ return require('packer').startup(function(use)
     use "rose-pine/neovim"
     use "liuchengxu/space-vim-dark"
     use "folke/tokyonight.nvim"
-    use "bluz71/vim-moonfly-colors"
     use "ellisonleao/gruvbox.nvim"
     use "catppuccin/nvim"
-    use "svrana/neosolarized.nvim"
     use "rebelot/kanagawa.nvim"
-    use "chriskempson/base16-vim"
+    use "shaunsingh/solarized.nvim"
 end)

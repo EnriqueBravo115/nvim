@@ -7,19 +7,32 @@ local root_dir = require('jdtls.setup').find_root(root_markers)
 local workspace_folder = home .. "/.cache/jdtls/workspace" .. vim.fn.fnamemodify(root_dir, ":p:h:t")
 
 local bundles = {
-    vim.fn.glob(home ..
-        '/Applications/java-debug/com.microsoft.java.debug.plugin/target/com.microsoft.java.debug.plugin-*.jar')
+    vim.fn.glob(
+        home .. '/Applications/java-debug/com.microsoft.java.debug.plugin/target/com.microsoft.java.debug.plugin-*.jar',
+        "\n")
 }
 
+vim.list_extend(bundles,
+    vim.split(vim.fn.glob(home .. "/Applications/vscode-java-test/server/*.jar"), '\n'))
+
+local extendedClientCapabilities = jdtls.extendedClientCapabilities
+extendedClientCapabilities.resolveAdditionalTextEditsSupport = true
+
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
+
 local config = {
+    capabilities = capabilities,
     settings = {
         flags = {
             allow_incremental_sync = true,
         },
         init_options = {
-            bundles = bundles
         },
         java = {
+            --            saveActions = {
+            --                organizeImports = true,
+            --            },
             format = {
                 settings = {
                     url = home .. ".config/nvim/lang-servers/intellij-java-google-style.xml",
@@ -77,6 +90,7 @@ local config = {
                 },
                 useBlocks = true,
             },
+            extendedClientCapabilities = extendedClientCapabilities
         },
     },
     cmd = {
@@ -97,10 +111,51 @@ local config = {
         "-configuration", "/home/nullboy/Applications/jdtls/config_linux/",
         '-data', workspace_folder,
     },
+    init_options = {
+        bundles = bundles,
+    },
 }
 
 config['on_attach'] = function(client, bufnr)
+    local _, _ = pcall(vim.lsp.codelens.refresh)
     require('jdtls').setup_dap({ hotcodereplace = 'auto' })
+    require("lsp-config").on_attach(client, bufnr)
+    local status_ok, jdtls_dap = pcall(require, "jdtls.dap")
+    if status_ok then
+        jdtls_dap.setup_dap_main_class_configs()
+    end
 end
 
+require('dap.ext.vscode').load_launchjs()
+
+vim.api.nvim_create_autocmd({ "BufWritePost" }, {
+    pattern = { "*.java" },
+    callback = function()
+        local _, _ = pcall(vim.lsp.codelens.refresh)
+    end,
+})
+
 jdtls.start_or_attach(config)
+
+local set = vim.keymap.set
+
+set('n', "<leader>df", function()
+    if vim.bo.modified then
+        vim.cmd('w')
+    end
+    jdtls.test_class()
+end, opts)
+
+set('n', "<leader>dn", function()
+    if vim.bo.modified then
+        vim.cmd('w')
+    end
+    jdtls.test_nearest_method({
+        config_overrides = {
+            stepFilters = {
+                skipClasses = { "$JDK", "junit.*" },
+                skipSynthetics = true
+            }
+        }
+    })
+end, opts)

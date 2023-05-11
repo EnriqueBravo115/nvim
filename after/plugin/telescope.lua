@@ -16,7 +16,11 @@ vim.keymap.set('n', '<leader>fe', builtin.diagnostics, {})
 vim.keymap.set('n', '<leader>fr', builtin.lsp_references, {})
 vim.keymap.set('n', '<leader>fi', builtin.lsp_implementations, {})
 
+vim.api.nvim_set_keymap("n", "<leader>sd", "<cmd>lua vim.lsp.buf.code_action()<CR>", { noremap = true })
+
 vim.keymap.set('n', '<leader>fs', function()
     builtin.grep_string({ search = vim.fn.input("Grep > ") })
 end)
 vim.keymap.set('n', '<leader>vh', builtin.help_tags, {})
+
+require('telescope').load_extension('dap')

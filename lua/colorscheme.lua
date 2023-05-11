@@ -1,76 +1,3 @@
-require("catppuccin").setup({
-    flavour = "macchiato",     -- latte, frappe, macchiato, mocha
-    transparent_background = true,
-    show_end_of_buffer = true, -- show the '~' characters after the end of buffers
-    term_colors = false,
-    dim_inactive = {
-        enabled = false,
-        shade = "dark",
-        percentage = 0.15,
-    },
-    no_italic = true, -- Force no italic
-    no_bold = true,   -- Force no bold
-    styles = {
-        comments = { "italic" },
-        conditionals = { "italic" },
-        loops = {},
-        functions = {},
-        keywords = {},
-        strings = {},
-        variables = {},
-        numbers = {},
-        booleans = {},
-        properties = {},
-        types = {},
-        operators = {},
-    },
-    color_overrides = {},
-    custom_highlights = {},
-    integrations = {
-        cmp = true,
-        gitsigns = true,
-        nvimtree = true,
-        telescope = true,
-        notify = false,
-        mini = false,
-        -- For more plugins integrations please scroll down (https://github.com/catppuccin/nvim#integrations)
-    },
-})
-
-require('rose-pine').setup({
-    variant = 'auto',
-    bold_vert_split = false,
-    dim_nc_background = false,
-    disable_background = true,
-    disable_float_background = true,
-    disable_italics = true,
-    --- @usage string hex value or named color from rosepinetheme.com/palette
-    groups = {
-        background = 'base',
-        background_nc = '_experimental_nc',
-        panel = 'surface',
-        panel_nc = 'base',
-        border = 'highlight_med',
-        comment = 'muted',
-        link = 'iris',
-        punctuation = 'subtle',
-        error = 'love',
-        hint = 'iris',
-        info = 'foam',
-        warn = 'gold',
-        headings = {
-            h1 = 'iris',
-            h2 = 'foam',
-            h3 = 'rose',
-            h4 = 'gold',
-            h5 = 'pine',
-            h6 = 'foam',
-        }
-        -- or set all headings at once
-        -- headings = 'subtle'
-    },
-})
-
 -- Default options:
 require('kanagawa').setup({
     compile = false,  -- enable compiling the colorscheme
@@ -104,8 +31,58 @@ require('kanagawa').setup({
     },
 })
 
-vim.cmd("colorscheme kanagawa-wave")
+require('nightfox').setup({
+    options = {
+        transparent = true,
+        terminal_colors = true,
+        styles = {
+            -- Style to be applied to different syntax groups
+            comments = "NONE", -- Value is any valid attr-list value `:help attr-list`
+            conditionals = "NONE",
+            constants = "NONE",
+            functions = "NONE",
+            keywords = "NONE",
+            numbers = "NONE",
+            operators = "NONE",
+            strings = "NONE",
+            types = "NONE",
+            variables = "NONE",
+        },
+        inverse = {
+            match_paren = false,
+            visual = true,
+            search = true,
+        },
+    },
+})
+
+-- setup must be called before loading the colorscheme
+-- Default options:
+require("gruvbox").setup({
+    undercurl = true,
+    underline = true,
+    bold = true,
+    italic = {
+        strings = false,
+        comments = false,
+        operators = false,
+        folds = true,
+    },
+    strikethrough = true,
+    invert_selection = true,
+    invert_signs = false,
+    invert_tabline = false,
+    invert_intend_guides = false,
+    inverse = true, -- invert background for search, diffs, statuslines and errors
+    contrast = "",  -- can be "hard", "soft" or empty string
+    palette_overrides = {},
+    overrides = {},
+    dim_inactive = false,
+    transparent_mode = false,
+})
+
+vim.cmd("colorscheme terafox")
 
 --vim.cmd('hi LineNr ctermbg=NONE guibg=NONE')
--- vim.cmd('hi Normal ctermbg=NONE guibg=NONE')
+--vim.cmd('hi Normal ctermbg=NONE guibg=NONE')
 --vim.cmd('hi SignColumn ctermbg=NONE guibg=NONE')
