@@ -35,7 +35,7 @@ local config = {
             --            },
             format = {
                 settings = {
-                    url = home .. ".config/nvim/lang-servers/intellij-java-google-style.xml",
+                    url = home .. ".config/nvim/lang-servers/eclipse-java-google-style.xml",
                     profile = "GoogleStyle",
                 },
             },

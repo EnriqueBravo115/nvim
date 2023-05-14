@@ -21,9 +21,9 @@ dap.configurations.java = {
     },
 }
 
-vim.fn.sign_define('DapBreakpoint', { text = '🔸', texthl = '', linehl = '', numhl = '' })
+vim.fn.sign_define('DapBreakpoint', { text = '', texthl = '', linehl = '', numhl = '' })
 vim.fn.sign_define('DapBreakpointRejected', { text = '', texthl = '', linehl = '', numhl = '' })
-vim.fn.sign_define('DapStopped', { text = '➡', texthl = '', linehl = 'DebugBreakpointLine', numhl = '' })
+vim.fn.sign_define('DapStopped', { text = '▶', texthl = '', linehl = 'DebugBreakpointLine', numhl = '' })
 
 require("dapui").setup({
     icons = { expanded = "▾", collapsed = "▸" },

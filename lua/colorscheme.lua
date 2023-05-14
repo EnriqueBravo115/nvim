@@ -81,7 +81,18 @@ require("gruvbox").setup({
     transparent_mode = false,
 })
 
-vim.cmd("colorscheme terafox")
+require("tokyonight").setup({
+    transparent = true,     -- Enable this to disable setting the background color
+    terminal_colors = true, -- Configure the colors used when opening a `:terminal` in Neovim
+    styles = {
+        comments = { italic = true },
+        keywords = { italic = true },
+        sidebars = "dark", -- style for sidebars, see below
+        floats = "dark",   -- style for floating windows
+    },
+})
+
+vim.cmd("colorscheme kanagawa-wave")
 
 --vim.cmd('hi LineNr ctermbg=NONE guibg=NONE')
 --vim.cmd('hi Normal ctermbg=NONE guibg=NONE')

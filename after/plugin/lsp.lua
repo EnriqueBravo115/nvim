@@ -22,7 +22,9 @@ require 'lspconfig'.pylsp.setup {
     }
 }
 
-require 'lspconfig'.angularls.setup {}
+require 'lspconfig'.kotlin_language_server.setup {}
+
+require 'lspconfig'.marksman.setup {}
 
 -- Fix Undefined global 'vim'
 
