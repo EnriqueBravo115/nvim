@@ -8,10 +8,11 @@ local colors = {
     violet = '#d183e8',
     grey   = '#254147',
     k1     = '#00FFFFFF',
-    k2     = '#F6AE2D',
-    k3     = '#FF5D62',
+    k2     = '#BCE784',
+    k3     = '#FF9E3B',
     k4     = '#2A2A37',
-    k5     = '#957FB8'
+    k5     = '#957FB8',
+    line   = '#392B58'
 }
 
 local bubbles_theme = {
@@ -32,9 +33,9 @@ local bubbles_theme = {
 
 require('lualine').setup {
     options = {
-        theme = bubbles_theme,
+        theme = 'auto',
         component_separators = '',
-        section_separators = { left = '', right = '' },
+        section_separators = { left = '', right = '' },
         always_divide_middle = false,
         refresh = {
             statusline = 1000,
@@ -45,13 +46,13 @@ require('lualine').setup {
     sections = {
         lualine_a = { { 'mode', icon = '' } },
         lualine_b = {
-            { 'branch', icon = '󰊢' },
+            { 'branch', icon = ' ' },
             { 'diff',   symbols = { added = ' ', modified = ' ', removed = ' ' } } },
         lualine_c = { { 'filename' }, },
         lualine_x = {
             { 'filetype',   icon_only = false },
             { 'diagnostics' },
-            { 'fileformat', symbols = { unix = '' } },
+            { 'fileformat', symbols = { unix = '󰣨' } },
             { 'location' },
         },
         lualine_y = {},

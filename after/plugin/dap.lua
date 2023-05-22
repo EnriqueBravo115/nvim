@@ -21,6 +21,23 @@ dap.configurations.java = {
     },
 }
 
+dap.adapters.coreclr = {
+    type = 'executable',
+    command = '/home/nullboy/Applications/netcoredbg/netcoredbg',
+    args = { '--interpreter=vscode' }
+}
+
+dap.configurations.cs = {
+    {
+        type = "coreclr",
+        name = "launch - netcoredbg",
+        request = "launch",
+        program = function()
+            return vim.fn.input('Path to dll', vim.fn.getcwd() .. '/bin/Debug/', 'file')
+        end,
+    },
+}
+
 vim.fn.sign_define('DapBreakpoint', { text = '', texthl = '', linehl = '', numhl = '' })
 vim.fn.sign_define('DapBreakpointRejected', { text = '', texthl = '', linehl = '', numhl = '' })
 vim.fn.sign_define('DapStopped', { text = '▶', texthl = '', linehl = 'DebugBreakpointLine', numhl = '' })

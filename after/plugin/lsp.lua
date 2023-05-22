@@ -1,5 +1,8 @@
 local lsp = require("lsp-zero")
-local lsp_config = require("lspconfig")
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+local pid = vim.fn.getpid()
+local omnisharp_bin = "/home/nullboy/.local/share/nvim/mason/packages/omnisharp/omnisharp"
+
 
 lsp.preset("recommended")
 
@@ -13,9 +16,9 @@ require 'lspconfig'.pylsp.setup {
         pylsp = {
             plugins = {
                 pylsp = {
-                    jedi_hover = { enabled = true },
+                    jedi_hover = { enabled = false },
                     jedi_references = { enabled = true },
-                    jedi_signature_help = { enabled = true },
+                    jedi_signature_help = { enabled = false },
                 },
             }
         }
@@ -23,10 +26,6 @@ require 'lspconfig'.pylsp.setup {
 }
 
 require 'lspconfig'.kotlin_language_server.setup {}
-
-require 'lspconfig'.marksman.setup {}
-
--- Fix Undefined global 'vim'
 
 local cmp = require('cmp')
 local cmp_select = { behavior = cmp.SelectBehavior.Select }

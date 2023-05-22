@@ -14,10 +14,12 @@ vim.keymap.set("n", "<leader><leader>dq", ":tabclose<cr>", {})
 vim.keymap.set("n", "<leader>e", "<cmd>:NvimTreeToggle<CR>")
 vim.keymap.set("n", "<leader>x", "<cmd>bw<CR>")
 vim.keymap.set("n", "<leader>zt", "<cmd>tabnew %<CR>")
-vim.keymap.set("n", "<leader>zi", "<cmd>Neorg index<CR>")
-vim.keymap.set("n", "<leader>zr", "<cmd>Neorg return<CR>")
 
 vim.keymap.set("v", "<leader>y", '"+y<CR>')
 
--- SPRINGBOOT
+-- JAVA
+vim.keymap.set("n", "<leader>r", "<cmd>term gradle run<CR>")
 vim.keymap.set("n", "<leader>zg", "<cmd>term gradle bootRun --debug-jvm<CR>")
+
+-- HTTP
+vim.keymap.set("n", "<leader>fml", "<cmd>CellularAutomaton make_it_rain<CR>")

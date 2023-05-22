@@ -31,29 +31,15 @@ require('kanagawa').setup({
     },
 })
 
-require('nightfox').setup({
-    options = {
-        transparent = true,
-        terminal_colors = true,
-        styles = {
-            -- Style to be applied to different syntax groups
-            comments = "NONE", -- Value is any valid attr-list value `:help attr-list`
-            conditionals = "NONE",
-            constants = "NONE",
-            functions = "NONE",
-            keywords = "NONE",
-            numbers = "NONE",
-            operators = "NONE",
-            strings = "NONE",
-            types = "NONE",
-            variables = "NONE",
-        },
-        inverse = {
-            match_paren = false,
-            visual = true,
-            search = true,
-        },
-    },
+require('rose-pine').setup({
+    --- @usage 'auto'|'main'|'moon'|'dawn'
+    variant = 'auto',
+    dark_variant = 'main',
+    bold_vert_split = false,
+    dim_nc_background = false,
+    disable_background = true,
+    disable_float_background = true,
+    disable_italics = true,
 })
 
 -- setup must be called before loading the colorscheme
@@ -64,9 +50,9 @@ require("gruvbox").setup({
     bold = true,
     italic = {
         strings = false,
-        comments = false,
+        comments = true,
         operators = false,
-        folds = true,
+        folds = false,
     },
     strikethrough = true,
     invert_selection = true,
@@ -75,25 +61,8 @@ require("gruvbox").setup({
     invert_intend_guides = false,
     inverse = true, -- invert background for search, diffs, statuslines and errors
     contrast = "",  -- can be "hard", "soft" or empty string
-    palette_overrides = {},
-    overrides = {},
     dim_inactive = false,
-    transparent_mode = false,
+    transparent_mode = true,
 })
 
-require("tokyonight").setup({
-    transparent = true,     -- Enable this to disable setting the background color
-    terminal_colors = true, -- Configure the colors used when opening a `:terminal` in Neovim
-    styles = {
-        comments = { italic = true },
-        keywords = { italic = true },
-        sidebars = "dark", -- style for sidebars, see below
-        floats = "dark",   -- style for floating windows
-    },
-})
-
-vim.cmd("colorscheme kanagawa-wave")
-
---vim.cmd('hi LineNr ctermbg=NONE guibg=NONE')
---vim.cmd('hi Normal ctermbg=NONE guibg=NONE')
---vim.cmd('hi SignColumn ctermbg=NONE guibg=NONE')
+vim.cmd('colorscheme kanagawa')
