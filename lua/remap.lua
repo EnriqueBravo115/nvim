@@ -1,5 +1,6 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = ","
+local map = vim.keymap.set
 
 -- TELESCOPE
 vim.keymap.set("n", "<leader>cc", "<cmd>:Telescope flutter commands<CR>")
@@ -21,5 +22,21 @@ vim.keymap.set("v", "<leader>y", '"+y<CR>')
 vim.keymap.set("n", "<leader>r", "<cmd>term gradle run<CR>")
 vim.keymap.set("n", "<leader>zg", "<cmd>term gradle bootRun --debug-jvm<CR>")
 
--- HTTP
-vim.keymap.set("n", "<leader>fml", "<cmd>CellularAutomaton make_it_rain<CR>")
+-- DAP
+map("n", "<leader>as", vim.diagnostic.setloclist)
+
+map("n", "<leader>dc", function()
+    require("dap").continue()
+end)
+
+map("n", "<leader>dt", function()
+    require("dap").toggle_breakpoint()
+end)
+
+map("n", "<leader>dso", function()
+    require("dap").step_over()
+end)
+
+map("n", "<leader>dsi", function()
+    require("dap").step_into()
+end)

@@ -1,0 +1,2 @@
+require('dap-go').setup({
+})
