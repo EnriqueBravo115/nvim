@@ -13,7 +13,15 @@ return require('packer').startup(function(use)
     use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
     use "nvim-treesitter/nvim-treesitter-context"
     use { "windwp/nvim-autopairs", config = function() require("nvim-autopairs").setup {} end }
+    use {
+        'nvim-lualine/lualine.nvim',
+        requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+    }
     --   use "mechatroner/rainbow_csv"
+    use {
+        "SmiteshP/nvim-navic",
+        requires = "neovim/nvim-lspconfig"
+    }
 
     use { "kristijanhusak/vim-dadbod-ui", requires = { "tpope/vim-dadbod", "tpope/vim-dotenv" } }
     use {
@@ -77,4 +85,6 @@ return require('packer').startup(function(use)
     -- THEMES
     use "rose-pine/neovim"
     use "rebelot/kanagawa.nvim"
+    use "EdenEast/nightfox.nvim"
+    use 'Mofiqul/dracula.nvim'
 end)

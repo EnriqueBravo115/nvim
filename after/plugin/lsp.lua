@@ -10,28 +10,42 @@ lsp.ensure_installed({
 
 --require 'lspconfig'.kotlin_language_server.setup {}
 --require 'lspconfig'.solargraph.setup {}
-
+--require 'lspconfig'.marksman.setup {}
 local cmp = require('cmp')
-local cmp_select = { behavior = cmp.SelectBehavior.Select }
-local cmp_mappings = lsp.defaults.cmp_mappings({
-    ['<S-tab>'] = cmp.mapping.select_prev_item(cmp_select),
-    ["<CR>"] = cmp.mapping.confirm({ select = true }),
-    ['<tab>'] = cmp.mapping.select_next_item(cmp_select),
-    ["<C-Space>"] = cmp.mapping.complete(),
-})
 
-lsp.setup_nvim_cmp({
-    mapping = cmp_mappings
-})
-
-lsp.set_preferences({
-    suggest_lsp_servers = false,
-    sign_icons = {
-        error = 'ε',
-        warn = 'ω',
-        hint = 'ħ',
-        info = 'ĩ'
-    }
+cmp.setup({
+    sources = {
+        { name = "nvim_lsp" },
+        { name = "vsnip" },
+    },
+    snippet = {
+        expand = function(args)
+            -- Comes from vsnip
+            vim.fn["vsnip#anonymous"](args.body)
+        end,
+    },
+    mapping = cmp.mapping.preset.insert({
+        -- None of this made sense to me when first looking into this since there
+        -- is no vim docs, but you can't have select = true here _unless_ you are
+        -- also using the snippet stuff. So keep in mind that if you remove
+        -- snippets you need to remove this select
+        ["<CR>"] = cmp.mapping.confirm({ select = true }),
+        -- I use tabs... some say you should stick to ins-completion but this is just here as an example
+        ["<Tab>"] = function(fallback)
+            if cmp.visible() then
+                cmp.select_next_item()
+            else
+                fallback()
+            end
+        end,
+        ["<S-Tab>"] = function(fallback)
+            if cmp.visible() then
+                cmp.select_prev_item()
+            else
+                fallback()
+            end
+        end,
+    }),
 })
 
 vim.cmd [[autocmd BufWritePre * lua vim.lsp.buf.format()]]
@@ -53,6 +67,18 @@ lsp.on_attach(function(client, bufnr)
 end)
 
 lsp.setup()
+
+cmp.setup({
+    formatting = {
+        fields = { 'abbr', 'kind', 'menu' },
+        format = require('lspkind').cmp_format({
+            mode = 'symbol',       -- show only symbol annotations
+            maxwidth = 40,         -- prevent the popup from showing more than provided characters
+            ellipsis_char = '...', -- when popup menu exceed maxwidth, the truncated part would show ellipsis_char instead
+        })
+    }
+})
+
 
 vim.diagnostic.config({
     virtual_text = false

@@ -15,6 +15,7 @@ vim.keymap.set("n", "<leader><leader>dq", ":tabclose<cr>", {})
 vim.keymap.set("n", "<leader>e", "<cmd>:NvimTreeToggle<CR>")
 vim.keymap.set("n", "<leader>x", "<cmd>bw<CR>")
 vim.keymap.set("n", "<leader>zt", "<cmd>tabnew %<CR>")
+vim.keymap.set("n", "<leader>ww", "<cmd>:w<CR>")
 
 vim.keymap.set("v", "<leader>y", '"+y<CR>')
 
