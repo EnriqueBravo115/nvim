@@ -1,35 +1,3 @@
-require('kanagawa').setup({
-    compile = false,  -- enable compiling the colorscheme
-    undercurl = true, -- enable undercurls
-    commentStyle = { italic = false },
-    keywordStyle = { italic = false },
-    statementStyle = { bold = false },
-    transparent = true,    -- do not set background color
-    dimInactive = false,   -- dim inactive window `:h hl-NormalNC`
-    terminalColors = true, -- define vim.g.terminal_color_{0,17}
-    colors = {
-        theme = {
-            all = {
-                ui = {
-                    bg_gutter = "none",
-                    pmenu = {
-                        bg = "none",
-                        bg_sel = "#16161D"
-                    }
-                },
-                syn = {
-                    identifier = "#938AA9",
-                    variable = "#d67ad2",
-                    string = "#D27E99",
-                    parameter = "#FFA066",
-                    operator = "#F2C57C",
-                    -- keyword = "#719cd6"
-                }
-            }
-        }
-    },
-})
-
 require('rose-pine').setup({
     --- @usage 'auto'|'main'|'moon'|'dawn'
     variant = 'auto',
@@ -41,4 +9,45 @@ require('rose-pine').setup({
     disable_italics = true,
 })
 
-vim.cmd("colorscheme rose-pine")
+require("catppuccin").setup({
+    flavour = "mocha", -- latte, frappe, macchiato, mocha
+    background = { -- :h background
+        light = "latte",
+        dark = "mocha",
+    },
+    transparent_background = true,
+    show_end_of_buffer = false, -- show the '~' characters after the end of buffers
+    term_colors = false,
+    dim_inactive = {
+        enabled = false,
+        shade = "dark",
+        percentage = 0.15,
+    },
+    no_italic = true, -- Force no italic
+    no_bold = true, -- Force no bold
+    no_underline = false, -- Force no underline
+    styles = {
+        comments = { "italic" },
+        conditionals = { "italic" },
+        loops = {},
+        functions = {},
+        keywords = {},
+        strings = {},
+        variables = {},
+        numbers = {},
+        booleans = {},
+        properties = {},
+        types = {},
+        operators = {},
+    },
+    color_overrides = {},
+    custom_highlights = {},
+    integrations = {
+        cmp = true,
+        gitsigns = true,
+        nvimtree = true,
+        telescope = true,
+    },
+})
+
+vim.cmd.colorscheme "catppuccin"

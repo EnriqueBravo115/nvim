@@ -11,26 +11,13 @@ lsp.ensure_installed({
 --require 'lspconfig'.kotlin_language_server.setup {}
 --require 'lspconfig'.solargraph.setup {}
 --require 'lspconfig'.marksman.setup {}
+require 'lspconfig'.bashls.setup {}
+
 local cmp = require('cmp')
 
 cmp.setup({
-    sources = {
-        { name = "nvim_lsp" },
-        { name = "vsnip" },
-    },
-    snippet = {
-        expand = function(args)
-            -- Comes from vsnip
-            vim.fn["vsnip#anonymous"](args.body)
-        end,
-    },
     mapping = cmp.mapping.preset.insert({
-        -- None of this made sense to me when first looking into this since there
-        -- is no vim docs, but you can't have select = true here _unless_ you are
-        -- also using the snippet stuff. So keep in mind that if you remove
-        -- snippets you need to remove this select
         ["<CR>"] = cmp.mapping.confirm({ select = true }),
-        -- I use tabs... some say you should stick to ins-completion but this is just here as an example
         ["<Tab>"] = function(fallback)
             if cmp.visible() then
                 cmp.select_next_item()
@@ -48,7 +35,7 @@ cmp.setup({
     }),
 })
 
-vim.cmd [[autocmd BufWritePre * lua vim.lsp.buf.format()]]
+--vim.cmd [[autocmd BufWritePre * lua vim.lsp.buf.format()]]
 
 lsp.on_attach(function(client, bufnr)
     local opts = { buffer = bufnr, remap = false }
@@ -73,12 +60,11 @@ cmp.setup({
         fields = { 'abbr', 'kind', 'menu' },
         format = require('lspkind').cmp_format({
             mode = 'symbol',       -- show only symbol annotations
-            maxwidth = 40,         -- prevent the popup from showing more than provided characters
+            maxwidth = 30,         -- prevent the popup from showing more than provided characters
             ellipsis_char = '...', -- when popup menu exceed maxwidth, the truncated part would show ellipsis_char instead
         })
     }
 })
-
 
 vim.diagnostic.config({
     virtual_text = false

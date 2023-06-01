@@ -79,6 +79,11 @@ _G.packer_plugins = {
     path = "/home/nullboy/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
+  catppuccin = {
+    loaded = true,
+    path = "/home/nullboy/.local/share/nvim/site/pack/packer/start/catppuccin",
+    url = "https://github.com/catppuccin/nvim"
+  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "/home/nullboy/.local/share/nvim/site/pack/packer/start/cmp-buffer",
@@ -104,10 +109,10 @@ _G.packer_plugins = {
     path = "/home/nullboy/.local/share/nvim/site/pack/packer/start/conjure",
     url = "https://github.com/Olical/conjure"
   },
-  ["dracula.nvim"] = {
+  ["gitsigns.nvim"] = {
     loaded = true,
-    path = "/home/nullboy/.local/share/nvim/site/pack/packer/start/dracula.nvim",
-    url = "https://github.com/Mofiqul/dracula.nvim"
+    path = "/home/nullboy/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
+    url = "https://github.com/lewis6991/gitsigns.nvim"
   },
   harpoon = {
     loaded = true,
@@ -121,11 +126,6 @@ _G.packer_plugins = {
     only_cond = false,
     path = "/home/nullboy/.local/share/nvim/site/pack/packer/opt/hop.nvim",
     url = "https://github.com/phaazon/hop.nvim"
-  },
-  ["kanagawa.nvim"] = {
-    loaded = true,
-    path = "/home/nullboy/.local/share/nvim/site/pack/packer/start/kanagawa.nvim",
-    url = "https://github.com/rebelot/kanagawa.nvim"
   },
   ["lsp-zero.nvim"] = {
     loaded = true,
@@ -156,11 +156,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/nullboy/.local/share/nvim/site/pack/packer/start/neovim",
     url = "https://github.com/rose-pine/neovim"
-  },
-  ["nightfox.nvim"] = {
-    loaded = true,
-    path = "/home/nullboy/.local/share/nvim/site/pack/packer/start/nightfox.nvim",
-    url = "https://github.com/EdenEast/nightfox.nvim"
   },
   ["null-ls.nvim"] = {
     loaded = true,
@@ -203,11 +198,6 @@ _G.packer_plugins = {
     path = "/home/nullboy/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
   },
-  ["nvim-navic"] = {
-    loaded = true,
-    path = "/home/nullboy/.local/share/nvim/site/pack/packer/start/nvim-navic",
-    url = "https://github.com/SmiteshP/nvim-navic"
-  },
   ["nvim-tree.lua"] = {
     loaded = true,
     path = "/home/nullboy/.local/share/nvim/site/pack/packer/start/nvim-tree.lua",
@@ -222,6 +212,15 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/nullboy/.local/share/nvim/site/pack/packer/start/nvim-treesitter-context",
     url = "https://github.com/nvim-treesitter/nvim-treesitter-context"
+  },
+  ["nvim-ts-autotag"] = {
+    config = { "\27LJ\2\nL\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\1\venable\2\nsetup\20nvim-ts-autotag\frequire\0" },
+    loaded = false,
+    needs_bufread = false,
+    only_cond = false,
+    path = "/home/nullboy/.local/share/nvim/site/pack/packer/opt/nvim-ts-autotag",
+    url = "https://github.com/windwp/nvim-ts-autotag",
+    wants = { "nvim-treesitter" }
   },
   ["nvim-ts-rainbow"] = {
     loaded = true,
@@ -320,6 +319,7 @@ vim.cmd [[au!]]
   -- Event lazy-loads
 time([[Defining lazy-load event autocommands]], true)
 vim.cmd [[au BufRead * ++once lua require("packer.load")({'hop.nvim'}, { event = "BufRead *" }, _G.packer_plugins)]]
+vim.cmd [[au InsertEnter * ++once lua require("packer.load")({'nvim-ts-autotag'}, { event = "InsertEnter *" }, _G.packer_plugins)]]
 time([[Defining lazy-load event autocommands]], false)
 vim.cmd("augroup END")
 

@@ -18,10 +18,7 @@ return require('packer').startup(function(use)
         requires = { 'nvim-tree/nvim-web-devicons', opt = true }
     }
     --   use "mechatroner/rainbow_csv"
-    use {
-        "SmiteshP/nvim-navic",
-        requires = "neovim/nvim-lspconfig"
-    }
+    use "lewis6991/gitsigns.nvim"
 
     use { "kristijanhusak/vim-dadbod-ui", requires = { "tpope/vim-dadbod", "tpope/vim-dotenv" } }
     use {
@@ -82,9 +79,11 @@ return require('packer').startup(function(use)
         }
     }
 
+    use {
+        "windwp/nvim-ts-autotag",
+    }
+
     -- THEMES
     use "rose-pine/neovim"
-    use "rebelot/kanagawa.nvim"
-    use "EdenEast/nightfox.nvim"
-    use 'Mofiqul/dracula.nvim'
+    use { "catppuccin/nvim", as = "catppuccin" }
 end)
