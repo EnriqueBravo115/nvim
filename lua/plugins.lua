@@ -19,6 +19,7 @@ return require('packer').startup(function(use)
     }
     --   use "mechatroner/rainbow_csv"
     use "lewis6991/gitsigns.nvim"
+    use "lukas-reineke/indent-blankline.nvim"
 
     use { "kristijanhusak/vim-dadbod-ui", requires = { "tpope/vim-dadbod", "tpope/vim-dotenv" } }
     use {
@@ -40,11 +41,6 @@ return require('packer').startup(function(use)
 
     use "mfussenegger/nvim-jdtls"
     use 'leoluz/nvim-dap-go'
-
-    use "Olical/conjure"
-    use "radenling/vim-dispatch-neovim"
-    use "clojure-vim/vim-jack-in"
-    use "tpope/vim-dispatch"
 
     -- LSP
     use({
@@ -79,11 +75,6 @@ return require('packer').startup(function(use)
         }
     }
 
-    use {
-        "windwp/nvim-ts-autotag",
-    }
-
     -- THEMES
-    use "rose-pine/neovim"
-    use { "catppuccin/nvim", as = "catppuccin" }
+    use "ellisonleao/gruvbox.nvim"
 end)

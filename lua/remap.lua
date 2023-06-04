@@ -3,7 +3,6 @@ vim.g.maplocalleader = ","
 local map = vim.keymap.set
 
 -- TELESCOPE
-vim.keymap.set("n", "<leader>cc", "<cmd>:Telescope flutter commands<CR>")
 vim.keymap.set("n", "<leader>lc", "<cmd>:lua require'telescope'.extensions.dap.commands{}<CR>")
 vim.keymap.set("n", "<leader>lb", "<cmd>:lua require'telescope'.extensions.dap.list_breakpoints{}<CR>")
 

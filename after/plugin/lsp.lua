@@ -9,9 +9,10 @@ lsp.ensure_installed({
 })
 
 --require 'lspconfig'.kotlin_language_server.setup {}
---require 'lspconfig'.solargraph.setup {}
+require 'lspconfig'.solargraph.setup {}
 --require 'lspconfig'.marksman.setup {}
 require 'lspconfig'.bashls.setup {}
+--require 'lspconfig'.ruby_ls.setup {}
 
 local cmp = require('cmp')
 
@@ -35,7 +36,7 @@ cmp.setup({
     }),
 })
 
---vim.cmd [[autocmd BufWritePre * lua vim.lsp.buf.format()]]
+vim.cmd [[autocmd BufWritePre * lua vim.lsp.buf.format()]]
 
 lsp.on_attach(function(client, bufnr)
     local opts = { buffer = bufnr, remap = false }
