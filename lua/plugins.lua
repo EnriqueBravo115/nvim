@@ -8,7 +8,6 @@ return require('packer').startup(function(use)
     use "nvim-tree/nvim-tree.lua"
     use "nvim-tree/nvim-web-devicons"
     use "folke/zen-mode.nvim"
-    use "vimwiki/vimwiki"
     use "tpope/vim-fugitive"
     use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
     use "nvim-treesitter/nvim-treesitter-context"
@@ -19,7 +18,8 @@ return require('packer').startup(function(use)
     }
     --   use "mechatroner/rainbow_csv"
     use "lewis6991/gitsigns.nvim"
-    use "lukas-reineke/indent-blankline.nvim"
+    --use "lukas-reineke/indent-blankline.nvim"
+    use "vimwiki/vimwiki"
 
     use { "kristijanhusak/vim-dadbod-ui", requires = { "tpope/vim-dadbod", "tpope/vim-dotenv" } }
     use {
@@ -75,6 +75,107 @@ return require('packer').startup(function(use)
         }
     }
 
+    use({
+        "utilyre/barbecue.nvim",
+        tag = "*",
+        requires = {
+            "SmiteshP/nvim-navic",
+            "nvim-tree/nvim-web-devicons", -- optional dependency
+        },
+        after = "nvim-web-devicons",       -- keep this if you're using NvChad
+        config = function()
+            require("barbecue").setup({
+                show_dirname = false,
+                exclude_filetypes = { "norg" },
+                symbols = {
+                    separator = "▸",
+                },
+                kinds = {
+                    Class = "",
+                    Constructor = '󱥊',
+                    Method = ''
+                }
+            })
+        end,
+    })
+
+    use {
+        "nvim-neorg/neorg",
+        config = function()
+            require('neorg').setup {
+                load = {
+                    ["core.defaults"] = {}, -- Loads default behaviour
+                    ["core.concealer"] = {
+                        config = {
+                            icons = {
+                                heading = {
+                                    icons = { "✿", "☉", "✻", "✡", "✺" }
+                                },
+                                code_block = {
+                                    content_only = true
+                                }
+                            }
+                        }
+                    },                  -- Adds pretty icons to your documents
+                    ["core.dirman"] = { -- Manages Neorg workspaces
+                        config = {
+                            workspaces = {
+                                notes = "~/Documentos/neorg/",
+                            },
+                            default_workspace = "notes"
+                        },
+                    },
+                    ["core.journal"] = {
+                        config = {
+                            toc_format = function(entries)
+                                local months_text = {
+                                    "January",
+                                    "February",
+                                    "March",
+                                    "April",
+                                    "May",
+                                    "June",
+                                    "July",
+                                    "August",
+                                    "September",
+                                    "October",
+                                    "November",
+                                    "December",
+                                }
+                                -- Convert the entries into a certain format to be written
+                                local output = {}
+                                local current_year
+                                local current_month
+                                for _, entry in ipairs(entries) do
+                                    -- Don't print the year and month if they haven't changed
+                                    if not current_year or current_year < entry[1] then
+                                        current_year = entry[1]
+                                        table.insert(output, "* " .. current_year)
+                                    end
+                                    if not current_month or current_month < entry[2] then
+                                        current_month = entry[2]
+                                        table.insert(output, "** " .. months_text[current_month])
+                                    end
+
+                                    -- Prints the file link
+                                    print(vim.inspect(entry))
+                                    table.insert(output, entry[4] .. string.format("[%s]", entry[5]))
+                                end
+
+                                return output
+                            end,
+                        },
+
+                    }
+                },
+            }
+        end,
+        run = ":Neorg sync-parsers",
+        requires = "nvim-lua/plenary.nvim",
+    }
+
     -- THEMES
     use "ellisonleao/gruvbox.nvim"
+    use 'navarasu/onedark.nvim'
+    use { "catppuccin/nvim", as = "catppuccin" }
 end)

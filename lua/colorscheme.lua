@@ -1,10 +1,10 @@
 require("gruvbox").setup({
     undercurl = true,
     underline = true,
-    bold = true,
+    bold = false,
     italic = {
         strings = false,
-        comments = true,
+        comments = false,
         operators = false,
         folds = false,
     },
@@ -21,4 +21,16 @@ require("gruvbox").setup({
     transparent_mode = true,
 })
 
-vim.cmd("colorscheme gruvbox")
+require('onedark').setup {
+    transparent = true, -- Show/hide background
+}
+
+require("catppuccin").setup({
+    transparent_background = true,
+    no_italic = true
+})
+
+-- Lua initialization file
+vim.g.moonflyTransparent = true
+
+vim.cmd("colorscheme catppuccin-frappe")

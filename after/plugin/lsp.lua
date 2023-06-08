@@ -1,5 +1,4 @@
 local lsp = require("lsp-zero")
-local capabilities = vim.lsp.protocol.make_client_capabilities()
 
 lsp.preset("recommended")
 
@@ -8,11 +7,7 @@ lsp.ensure_installed({
     'rust_analyzer',
 })
 
---require 'lspconfig'.kotlin_language_server.setup {}
-require 'lspconfig'.solargraph.setup {}
 --require 'lspconfig'.marksman.setup {}
-require 'lspconfig'.bashls.setup {}
---require 'lspconfig'.ruby_ls.setup {}
 
 local cmp = require('cmp')
 

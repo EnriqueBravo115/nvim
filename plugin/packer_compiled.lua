@@ -79,6 +79,19 @@ _G.packer_plugins = {
     path = "/home/nullboy/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
+  ["barbecue.nvim"] = {
+    config = { "\27LJ\2\n∆\1\0\0\4\0\n\0\r6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\0025\3\6\0=\3\a\0025\3\b\0=\3\t\2B\0\2\1K\0\1\0\nkinds\1\0\3\nClass\bÔÄì\vMethod\bÓàè\16Constructor\tÛ±•ä\fsymbols\1\0\1\14separator\b‚ñ∏\22exclude_filetypes\1\2\0\0\tnorg\1\0\1\17show_dirname\1\nsetup\rbarbecue\frequire\0" },
+    load_after = {},
+    loaded = true,
+    needs_bufread = false,
+    path = "/home/nullboy/.local/share/nvim/site/pack/packer/opt/barbecue.nvim",
+    url = "https://github.com/utilyre/barbecue.nvim"
+  },
+  catppuccin = {
+    loaded = true,
+    path = "/home/nullboy/.local/share/nvim/site/pack/packer/start/catppuccin",
+    url = "https://github.com/catppuccin/nvim"
+  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "/home/nullboy/.local/share/nvim/site/pack/packer/start/cmp-buffer",
@@ -122,11 +135,6 @@ _G.packer_plugins = {
     path = "/home/nullboy/.local/share/nvim/site/pack/packer/opt/hop.nvim",
     url = "https://github.com/phaazon/hop.nvim"
   },
-  ["indent-blankline.nvim"] = {
-    loaded = true,
-    path = "/home/nullboy/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
-    url = "https://github.com/lukas-reineke/indent-blankline.nvim"
-  },
   ["lsp-zero.nvim"] = {
     loaded = true,
     path = "/home/nullboy/.local/share/nvim/site/pack/packer/start/lsp-zero.nvim",
@@ -151,6 +159,12 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/nullboy/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
+  },
+  neorg = {
+    config = { "\27LJ\2\nı\2\0\1\18\0\f\00055\1\0\0004\2\0\0,\3\4\0006\5\1\0\18\a\0\0B\5\2\4X\b+Ä\15\0\3\0X\n\3Ä:\n\1\t\1\3\n\0X\n\bÄ:\3\1\t6\n\2\0009\n\3\n\18\f\2\0'\r\4\0\18\14\3\0&\r\14\rB\n\3\1\15\0\4\0X\n\3Ä:\n\2\t\1\4\n\0X\n\bÄ:\4\2\t6\n\2\0009\n\3\n\18\f\2\0'\r\5\0008\14\4\1&\r\14\rB\n\3\0016\n\6\0006\f\a\0009\f\b\f\18\14\t\0B\f\2\0A\n\0\0016\n\2\0009\n\3\n\18\f\2\0:\r\4\t6\14\t\0009\14\n\14'\16\v\0:\17\5\tB\14\3\2&\r\14\rB\n\3\1E\b\3\3R\b”\127L\2\2\0\t[%s]\vformat\vstring\finspect\bvim\nprint\b** \a* \vinsert\ntable\vipairs\1\r\0\0\fJanuary\rFebruary\nMarch\nApril\bMay\tJune\tJuly\vAugust\14September\fOctober\rNovember\rDecemberï\3\1\0\t\0\28\0#6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\26\0005\3\3\0004\4\0\0=\4\4\0035\4\r\0005\5\f\0005\6\b\0005\a\6\0005\b\5\0=\b\a\a=\a\t\0065\a\n\0=\a\v\6=\6\a\5=\5\14\4=\4\15\0035\4\19\0005\5\17\0005\6\16\0=\6\18\5=\5\14\4=\4\20\0035\4\24\0005\5\22\0003\6\21\0=\6\23\5=\5\14\4=\4\25\3=\3\27\2B\0\2\1K\0\1\0\tload\1\0\0\17core.journal\1\0\0\15toc_format\1\0\0\0\16core.dirman\1\0\0\15workspaces\1\0\1\22default_workspace\nnotes\1\0\1\nnotes\24~/Documentos/neorg/\19core.concealer\vconfig\1\0\0\1\0\0\15code_block\1\0\1\17content_only\2\fheading\1\0\0\nicons\1\0\0\1\6\0\0\b‚úø\b‚òâ\b‚úª\b‚ú°\b‚ú∫\18core.defaults\1\0\0\nsetup\nneorg\frequire\0" },
+    loaded = true,
+    path = "/home/nullboy/.local/share/nvim/site/pack/packer/start/neorg",
+    url = "https://github.com/nvim-neorg/neorg"
   },
   ["null-ls.nvim"] = {
     loaded = true,
@@ -193,6 +207,11 @@ _G.packer_plugins = {
     path = "/home/nullboy/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
   },
+  ["nvim-navic"] = {
+    loaded = true,
+    path = "/home/nullboy/.local/share/nvim/site/pack/packer/start/nvim-navic",
+    url = "https://github.com/SmiteshP/nvim-navic"
+  },
   ["nvim-tree.lua"] = {
     loaded = true,
     path = "/home/nullboy/.local/share/nvim/site/pack/packer/start/nvim-tree.lua",
@@ -217,6 +236,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/nullboy/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
     url = "https://github.com/nvim-tree/nvim-web-devicons"
+  },
+  ["onedark.nvim"] = {
+    loaded = true,
+    path = "/home/nullboy/.local/share/nvim/site/pack/packer/start/onedark.nvim",
+    url = "https://github.com/navarasu/onedark.nvim"
   },
   ["packer.nvim"] = {
     loaded = true,
@@ -281,10 +305,23 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: neorg
+time([[Config for neorg]], true)
+try_loadstring("\27LJ\2\nı\2\0\1\18\0\f\00055\1\0\0004\2\0\0,\3\4\0006\5\1\0\18\a\0\0B\5\2\4X\b+Ä\15\0\3\0X\n\3Ä:\n\1\t\1\3\n\0X\n\bÄ:\3\1\t6\n\2\0009\n\3\n\18\f\2\0'\r\4\0\18\14\3\0&\r\14\rB\n\3\1\15\0\4\0X\n\3Ä:\n\2\t\1\4\n\0X\n\bÄ:\4\2\t6\n\2\0009\n\3\n\18\f\2\0'\r\5\0008\14\4\1&\r\14\rB\n\3\0016\n\6\0006\f\a\0009\f\b\f\18\14\t\0B\f\2\0A\n\0\0016\n\2\0009\n\3\n\18\f\2\0:\r\4\t6\14\t\0009\14\n\14'\16\v\0:\17\5\tB\14\3\2&\r\14\rB\n\3\1E\b\3\3R\b”\127L\2\2\0\t[%s]\vformat\vstring\finspect\bvim\nprint\b** \a* \vinsert\ntable\vipairs\1\r\0\0\fJanuary\rFebruary\nMarch\nApril\bMay\tJune\tJuly\vAugust\14September\fOctober\rNovember\rDecemberï\3\1\0\t\0\28\0#6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\26\0005\3\3\0004\4\0\0=\4\4\0035\4\r\0005\5\f\0005\6\b\0005\a\6\0005\b\5\0=\b\a\a=\a\t\0065\a\n\0=\a\v\6=\6\a\5=\5\14\4=\4\15\0035\4\19\0005\5\17\0005\6\16\0=\6\18\5=\5\14\4=\4\20\0035\4\24\0005\5\22\0003\6\21\0=\6\23\5=\5\14\4=\4\25\3=\3\27\2B\0\2\1K\0\1\0\tload\1\0\0\17core.journal\1\0\0\15toc_format\1\0\0\0\16core.dirman\1\0\0\15workspaces\1\0\1\22default_workspace\nnotes\1\0\1\nnotes\24~/Documentos/neorg/\19core.concealer\vconfig\1\0\0\1\0\0\15code_block\1\0\1\17content_only\2\fheading\1\0\0\nicons\1\0\0\1\6\0\0\b‚úø\b‚òâ\b‚úª\b‚ú°\b‚ú∫\18core.defaults\1\0\0\nsetup\nneorg\frequire\0", "config", "neorg")
+time([[Config for neorg]], false)
 -- Config for: nvim-autopairs
 time([[Config for nvim-autopairs]], true)
 try_loadstring("\27LJ\2\n@\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\19nvim-autopairs\frequire\0", "config", "nvim-autopairs")
 time([[Config for nvim-autopairs]], false)
+-- Load plugins in order defined by `after`
+time([[Sequenced loading]], true)
+vim.cmd [[ packadd nvim-web-devicons ]]
+vim.cmd [[ packadd barbecue.nvim ]]
+
+-- Config for: barbecue.nvim
+try_loadstring("\27LJ\2\n∆\1\0\0\4\0\n\0\r6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\0025\3\6\0=\3\a\0025\3\b\0=\3\t\2B\0\2\1K\0\1\0\nkinds\1\0\3\nClass\bÔÄì\vMethod\bÓàè\16Constructor\tÛ±•ä\fsymbols\1\0\1\14separator\b‚ñ∏\22exclude_filetypes\1\2\0\0\tnorg\1\0\1\17show_dirname\1\nsetup\rbarbecue\frequire\0", "config", "barbecue.nvim")
+
+time([[Sequenced loading]], false)
 vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Event lazy-loads

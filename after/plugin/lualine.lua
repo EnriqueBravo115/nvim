@@ -35,7 +35,7 @@ require('lualine').setup {
     options = {
         theme = 'auto',
         component_separators = '',
-        section_separators = { left = '', right = '' },
+        section_separators = { left = '', right = '' },
         always_divide_middle = false,
         refresh = {
             statusline = 1000,
