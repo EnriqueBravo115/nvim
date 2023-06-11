@@ -21,16 +21,4 @@ require("gruvbox").setup({
     transparent_mode = true,
 })
 
-require('onedark').setup {
-    transparent = true, -- Show/hide background
-}
-
-require("catppuccin").setup({
-    transparent_background = true,
-    no_italic = true
-})
-
--- Lua initialization file
-vim.g.moonflyTransparent = true
-
-vim.cmd("colorscheme catppuccin-frappe")
+vim.cmd("colorscheme gruvbox")

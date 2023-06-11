@@ -18,7 +18,7 @@ return require('packer').startup(function(use)
     }
     --   use "mechatroner/rainbow_csv"
     use "lewis6991/gitsigns.nvim"
-    --use "lukas-reineke/indent-blankline.nvim"
+    --   use "lukas-reineke/indent-blankline.nvim"
     use "vimwiki/vimwiki"
 
     use { "kristijanhusak/vim-dadbod-ui", requires = { "tpope/vim-dadbod", "tpope/vim-dotenv" } }
@@ -173,9 +173,12 @@ return require('packer').startup(function(use)
         run = ":Neorg sync-parsers",
         requires = "nvim-lua/plenary.nvim",
     }
+    use "xiyaowong/transparent.nvim"
 
     -- THEMES
     use "ellisonleao/gruvbox.nvim"
-    use 'navarasu/onedark.nvim'
     use { "catppuccin/nvim", as = "catppuccin" }
+    use 'Mofiqul/dracula.nvim'
+    use({ 'rose-pine/neovim', as = 'rose-pine' })
+    use "liuchengxu/space-vim-dark"
 end)
