@@ -109,10 +109,10 @@ return require('packer').startup(function(use)
                         config = {
                             icons = {
                                 heading = {
-                                    icons = { "✿", "☉", "✻", "✡", "✺" }
+                                    icons = { "🌸", "🏵️", "💮", "🌼", "🌺" }
                                 },
                                 code_block = {
-                                    content_only = true
+                                    conceal = false
                                 }
                             }
                         }
@@ -120,60 +120,19 @@ return require('packer').startup(function(use)
                     ["core.dirman"] = { -- Manages Neorg workspaces
                         config = {
                             workspaces = {
-                                notes = "~/Documentos/neorg/",
+                                notes = "~/Documents/notes/",
                             },
                             default_workspace = "notes"
                         },
                     },
-                    ["core.journal"] = {
-                        config = {
-                            toc_format = function(entries)
-                                local months_text = {
-                                    "January",
-                                    "February",
-                                    "March",
-                                    "April",
-                                    "May",
-                                    "June",
-                                    "July",
-                                    "August",
-                                    "September",
-                                    "October",
-                                    "November",
-                                    "December",
-                                }
-                                -- Convert the entries into a certain format to be written
-                                local output = {}
-                                local current_year
-                                local current_month
-                                for _, entry in ipairs(entries) do
-                                    -- Don't print the year and month if they haven't changed
-                                    if not current_year or current_year < entry[1] then
-                                        current_year = entry[1]
-                                        table.insert(output, "* " .. current_year)
-                                    end
-                                    if not current_month or current_month < entry[2] then
-                                        current_month = entry[2]
-                                        table.insert(output, "** " .. months_text[current_month])
-                                    end
-
-                                    -- Prints the file link
-                                    print(vim.inspect(entry))
-                                    table.insert(output, entry[4] .. string.format("[%s]", entry[5]))
-                                end
-
-                                return output
-                            end,
-                        },
-
-                    }
                 },
             }
         end,
         run = ":Neorg sync-parsers",
         requires = "nvim-lua/plenary.nvim",
     }
-    use "xiyaowong/transparent.nvim"
+
+    use "norcalli/nvim-colorizer.lua"
 
     -- THEMES
     use "ellisonleao/gruvbox.nvim"
@@ -181,4 +140,6 @@ return require('packer').startup(function(use)
     use 'Mofiqul/dracula.nvim'
     use({ 'rose-pine/neovim', as = 'rose-pine' })
     use "liuchengxu/space-vim-dark"
+    use "EdenEast/nightfox.nvim" -- Packer
+    use "olimorris/onedarkpro.nvim"
 end)
