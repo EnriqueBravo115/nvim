@@ -40,6 +40,16 @@ local config = {
                 },
             },
             configuration = {
+                runtimes = {
+                    {
+                        name = "JavaSE-11",
+                        path = "/home/nullboy/.sdkman/candidates/java/11.0.19-tem"
+                    },
+                    {
+                        name = "JavaSE-1.8",
+                        path = "/home/nullboy/.sdkman/candidates/java/8.0.372-tem"
+                    }
+                },
                 updateBuildConfiguration = "interactive",
             },
             signatureHelp = { enabled = true },
@@ -60,13 +70,15 @@ local config = {
             },
             completion = {
                 favoriteStaticMembers = {
-                    "org.hamcrest.MatcherAssert.assertThat",
-                    "org.hamcrest.Matchers.*",
-                    "org.hamcrest.CoreMatchers.*",
+                    -- "org.hamcrest.MatcherAssert.assertThat",
+                    -- "org.hamcrest.Matchers.*",
+                    -- "org.hamcrest.CoreMatchers.*",
                     "org.junit.jupiter.api.Assertions.*",
                     "java.util.Objects.requireNonNull",
                     "java.util.Objects.requireNonNullElse",
-                    "org.mockito.Mockito.*"
+                    "org.mockito.Mockito.*",
+                    "java.util.stream.Collectors.*",
+                    "org.assertj.core.api.Assertions.*"
                 },
                 filteredTypes = {
                     "com.sun.*",

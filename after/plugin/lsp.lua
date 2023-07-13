@@ -7,13 +7,14 @@ lsp.ensure_installed({
     'rust_analyzer',
 })
 
---require 'lspconfig'.marksman.setup {}
+require 'lspconfig'.sqlls.setup {}
 
 local cmp = require('cmp')
 
 cmp.setup({
     mapping = cmp.mapping.preset.insert({
         ["<CR>"] = cmp.mapping.confirm({ select = true }),
+        ['<C-Space>'] = cmp.mapping.complete(),
         ["<Tab>"] = function(fallback)
             if cmp.visible() then
                 cmp.select_next_item()
@@ -65,3 +66,11 @@ cmp.setup({
 vim.diagnostic.config({
     virtual_text = false
 })
+
+vim.api.nvim_exec(
+    [[
+      autocmd FileType sql setlocal omnifunc=vim_dadbod_completion#omni
+      autocmd FileType sql,mysql,plsql lua require('cmp').setup.buffer({ sources = {{ name = 'vim-dadbod-completion' }} })
+  ]],
+    false
+)

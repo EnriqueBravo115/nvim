@@ -16,12 +16,18 @@ return require('packer').startup(function(use)
         'nvim-lualine/lualine.nvim',
         requires = { 'nvim-tree/nvim-web-devicons', opt = true }
     }
-    --   use "mechatroner/rainbow_csv"
-    use "lewis6991/gitsigns.nvim"
-    --   use "lukas-reineke/indent-blankline.nvim"
-    use "vimwiki/vimwiki"
+    use "xiyaowong/transparent.nvim"
 
-    use { "kristijanhusak/vim-dadbod-ui", requires = { "tpope/vim-dadbod", "tpope/vim-dotenv" } }
+    use "mechatroner/rainbow_csv"
+    use "lewis6991/gitsigns.nvim"
+    use "lukas-reineke/indent-blankline.nvim"
+    use "norcalli/nvim-colorizer.lua"
+
+    use { "kristijanhusak/vim-dadbod-ui",
+        requires = { "tpope/vim-dadbod",
+            "tpope/vim-dotenv",
+            "kristijanhusak/vim-dadbod-completion" } }
+
     use {
         "phaazon/hop.nvim",
         event = "BufRead",
@@ -36,11 +42,11 @@ return require('packer').startup(function(use)
     use { 'nvim-telescope/telescope.nvim', tag = '0.1.0', requires = { { 'nvim-lua/plenary.nvim' } } }
     use "nvim-telescope/telescope-dap.nvim"
 
+
     use { "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } }
     use "jose-elias-alvarez/null-ls.nvim"
 
     use "mfussenegger/nvim-jdtls"
-    use 'leoluz/nvim-dap-go'
 
     -- LSP
     use({
@@ -83,63 +89,18 @@ return require('packer').startup(function(use)
             "nvim-tree/nvim-web-devicons", -- optional dependency
         },
         after = "nvim-web-devicons",       -- keep this if you're using NvChad
-        config = function()
-            require("barbecue").setup({
-                show_dirname = false,
-                exclude_filetypes = { "norg" },
-                symbols = {
-                    separator = "▸",
-                },
-                kinds = {
-                    Class = "",
-                    Constructor = '󱥊',
-                    Method = ''
-                }
-            })
-        end,
     })
 
     use {
         "nvim-neorg/neorg",
-        config = function()
-            require('neorg').setup {
-                load = {
-                    ["core.defaults"] = {}, -- Loads default behaviour
-                    ["core.concealer"] = {
-                        config = {
-                            icons = {
-                                heading = {
-                                    icons = { "🌸", "🏵️", "💮", "🌼", "🌺" }
-                                },
-                                code_block = {
-                                    conceal = false
-                                }
-                            }
-                        }
-                    },                  -- Adds pretty icons to your documents
-                    ["core.dirman"] = { -- Manages Neorg workspaces
-                        config = {
-                            workspaces = {
-                                notes = "~/Documents/notes/",
-                            },
-                            default_workspace = "notes"
-                        },
-                    },
-                },
-            }
-        end,
         run = ":Neorg sync-parsers",
         requires = "nvim-lua/plenary.nvim",
     }
 
-    use "norcalli/nvim-colorizer.lua"
+    use({ 'scalameta/nvim-metals', requires = { "nvim-lua/plenary.nvim" } })
+    use 'eandrju/cellular-automaton.nvim'
 
     -- THEMES
-    use "ellisonleao/gruvbox.nvim"
-    use { "catppuccin/nvim", as = "catppuccin" }
-    use 'Mofiqul/dracula.nvim'
-    use({ 'rose-pine/neovim', as = 'rose-pine' })
-    use "liuchengxu/space-vim-dark"
-    use "EdenEast/nightfox.nvim" -- Packer
-    use "olimorris/onedarkpro.nvim"
+    use "rebelot/kanagawa.nvim"
+    use { "bluz71/vim-moonfly-colors", as = "moonfly" }
 end)

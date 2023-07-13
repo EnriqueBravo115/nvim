@@ -28,4 +28,8 @@ vim.opt.updatetime = 50
 
 vim.opt.conceallevel = 2
 
---vim.opt.colorcolumn = "80"
+vim.cmd("let g:indent_blankline_filetype_exclude = ['norg']")
+
+vim.opt.colorcolumn = "80"
+
+vim.cmd("highlight ColorColumn guibg=#292a39")

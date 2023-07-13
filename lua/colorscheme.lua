@@ -1,30 +1,14 @@
-require("gruvbox").setup({
-	undercurl = true,
-	underline = true,
-	bold = false,
-	italic = {
-		strings = false,
-		comments = false,
-		operators = false,
-		folds = false,
-	},
-	strikethrough = true,
-	invert_selection = true,
-	invert_signs = false,
-	invert_tabline = false,
-	invert_intend_guides = false,
-	inverse = true, -- invert background for search, diffs, statuslines and errors
-	contrast = "", -- can be "hard", "soft" or empty string
-	palette_overrides = {},
-	overrides = {},
-	dim_inactive = false,
-	transparent_mode = true,
+-- Lua initialization file
+local custom_highlight = vim.api.nvim_create_augroup("CustomHighlight", {})
+vim.api.nvim_create_autocmd("ColorScheme", {
+    pattern = "moonfly",
+    callback = function()
+        vim.api.nvim_set_hl(0, "String", { fg = "#ae81ff" })
+    end,
+    group = custom_highlight,
 })
 
-require("onedarkpro").setup({
-	options = {
-		transparency = true
-	}
-})
+vim.g.moonflyTransparent = true
+vim.g.moonflyItalics = true
 
-vim.cmd("colorscheme onedark")
+vim.cmd("colorscheme moonfly")
