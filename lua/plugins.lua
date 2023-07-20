@@ -2,59 +2,60 @@ return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
 
     -- GENERAL
-    use "mrjones2014/nvim-ts-rainbow"
-    use "akinsho/toggleterm.nvim"
-    use "theprimeagen/harpoon"
-    use "nvim-tree/nvim-tree.lua"
-    use "nvim-tree/nvim-web-devicons"
-    use "folke/zen-mode.nvim"
-    use "tpope/vim-fugitive"
-    use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
-    use "nvim-treesitter/nvim-treesitter-context"
-    use { "windwp/nvim-autopairs", config = function() require("nvim-autopairs").setup {} end }
+    use 'mrjones2014/nvim-ts-rainbow'
+    use 'akinsho/toggleterm.nvim'
+    use 'theprimeagen/harpoon'
+    use 'nvim-tree/nvim-tree.lua'
+    use 'nvim-tree/nvim-web-devicons'
+    use 'folke/zen-mode.nvim'
+    use 'tpope/vim-fugitive'
+    use({ 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' })
+    use 'nvim-treesitter/nvim-treesitter-context'
+    use { 'windwp/nvim-autopairs', config = function() require('nvim-autopairs').setup {} end }
     use {
         'nvim-lualine/lualine.nvim',
         requires = { 'nvim-tree/nvim-web-devicons', opt = true }
     }
-    use "xiyaowong/transparent.nvim"
+    use 'xiyaowong/transparent.nvim'
+    use 'tpope/vim-surround'
 
-    use "mechatroner/rainbow_csv"
-    use "lewis6991/gitsigns.nvim"
-    use "lukas-reineke/indent-blankline.nvim"
-    use "norcalli/nvim-colorizer.lua"
+    use 'mechatroner/rainbow_csv'
+    use 'lewis6991/gitsigns.nvim'
+    use 'lukas-reineke/indent-blankline.nvim'
+    use 'norcalli/nvim-colorizer.lua'
 
-    use { "kristijanhusak/vim-dadbod-ui",
-        requires = { "tpope/vim-dadbod",
-            "tpope/vim-dotenv",
-            "kristijanhusak/vim-dadbod-completion" } }
+    use { 'kristijanhusak/vim-dadbod-ui',
+        requires = { 'tpope/vim-dadbod',
+            'tpope/vim-dotenv',
+            'kristijanhusak/vim-dadbod-completion' } }
 
     use {
-        "phaazon/hop.nvim",
-        event = "BufRead",
+        'phaazon/hop.nvim',
+        event = 'BufRead',
         config = function()
-            require("hop").setup()
-            vim.api.nvim_set_keymap("n", "s", ":HopChar2<cr>", { silent = true })
-            vim.api.nvim_set_keymap("n", "S", ":HopWord<cr>", { silent = true })
+            require('hop').setup()
+            vim.api.nvim_set_keymap('n', 's', ':HopChar2<cr>', { silent = true })
+            vim.api.nvim_set_keymap('n', 'S', ':HopWord<cr>', { silent = true })
         end,
     }
 
     -- LANG
     use { 'nvim-telescope/telescope.nvim', tag = '0.1.0', requires = { { 'nvim-lua/plenary.nvim' } } }
-    use "nvim-telescope/telescope-dap.nvim"
+    use 'nvim-telescope/telescope-dap.nvim'
 
 
-    use { "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } }
-    use "jose-elias-alvarez/null-ls.nvim"
+    use { 'rcarriga/nvim-dap-ui', requires = { 'mfussenegger/nvim-dap' } }
+    use 'jose-elias-alvarez/null-ls.nvim'
 
-    use "mfussenegger/nvim-jdtls"
+    use 'mfussenegger/nvim-jdtls'
 
     -- LSP
     use({
-        "hrsh7th/nvim-cmp",
+        'hrsh7th/nvim-cmp',
         requires = {
-            { "hrsh7th/cmp-nvim-lsp" },
-            { "hrsh7th/cmp-vsnip" },
-            { "hrsh7th/vim-vsnip" },
+            { 'hrsh7th/cmp-nvim-lsp' },
+            { 'hrsh7th/cmp-vsnip' },
+            { 'hrsh7th/vim-vsnip' },
         },
     })
 
@@ -82,25 +83,29 @@ return require('packer').startup(function(use)
     }
 
     use({
-        "utilyre/barbecue.nvim",
-        tag = "*",
+        'utilyre/barbecue.nvim',
+        tag = '*',
         requires = {
-            "SmiteshP/nvim-navic",
-            "nvim-tree/nvim-web-devicons", -- optional dependency
+            'SmiteshP/nvim-navic',
+            'nvim-tree/nvim-web-devicons', -- optional dependency
         },
-        after = "nvim-web-devicons",       -- keep this if you're using NvChad
+        after = 'nvim-web-devicons',       -- keep this if you're using NvChad
     })
 
     use {
-        "nvim-neorg/neorg",
-        run = ":Neorg sync-parsers",
-        requires = "nvim-lua/plenary.nvim",
+        'nvim-neorg/neorg',
+        run = ':Neorg sync-parsers',
+        requires = 'nvim-lua/plenary.nvim',
     }
 
-    use({ 'scalameta/nvim-metals', requires = { "nvim-lua/plenary.nvim" } })
+    use({ 'scalameta/nvim-metals', requires = { 'nvim-lua/plenary.nvim' } })
     use 'eandrju/cellular-automaton.nvim'
 
+    use 'Olical/conjure'
+    use 'clojure-vim/vim-jack-in'
+    use 'radenling/vim-dispatch-neovim'
+    use 'tpope/vim-dispatch'
+
     -- THEMES
-    use "rebelot/kanagawa.nvim"
-    use { "bluz71/vim-moonfly-colors", as = "moonfly" }
+    use { 'bluz71/vim-moonfly-colors', as = 'moonfly' }
 end)

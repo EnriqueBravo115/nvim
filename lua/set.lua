@@ -33,3 +33,5 @@ vim.cmd("let g:indent_blankline_filetype_exclude = ['norg']")
 vim.opt.colorcolumn = "80"
 
 vim.cmd("highlight ColorColumn guibg=#292a39")
+
+vim.cmd("highlight NvimTreeFolderIcon guifg=#ae81ff")

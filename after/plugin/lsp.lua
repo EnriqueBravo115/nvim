@@ -59,6 +59,13 @@ cmp.setup({
             mode = 'symbol',       -- show only symbol annotations
             maxwidth = 30,         -- prevent the popup from showing more than provided characters
             ellipsis_char = '...', -- when popup menu exceed maxwidth, the truncated part would show ellipsis_char instead
+            symbol_map = {
+                Value = "󰌋",
+                Interface = "",
+                Method = "󰊕",
+                Class = "",
+                Text = "󰂡"
+            }
         })
     }
 })

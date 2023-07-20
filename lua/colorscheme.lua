@@ -1,4 +1,3 @@
--- Lua initialization file
 local custom_highlight = vim.api.nvim_create_augroup("CustomHighlight", {})
 vim.api.nvim_create_autocmd("ColorScheme", {
     pattern = "moonfly",

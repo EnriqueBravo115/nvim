@@ -44,10 +44,10 @@ require('lualine').setup {
         }
     },
     sections = {
-        lualine_a = { { 'mode', icon = '' } },
+        lualine_a = { { 'mode', icon = '' } },
         lualine_b = {
             { 'branch', icon = '󰊤' },
-            { 'diff' } },
+            { 'diff',   symbols = { added = ' ', modified = ' ', removed = '󰅜 ' } } },
         lualine_c = { { 'filename' }, },
         lualine_x = {
             { 'location' }

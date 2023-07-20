@@ -16,7 +16,7 @@ require('neorg').setup {
         ["core.dirman"] = {
             config = {
                 workspaces = {
-                    notes = "~/Documents/notes/",
+                    notes = "~/Documents/personal/notes/",
                 },
                 default_workspace = "notes"
             },
