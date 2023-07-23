@@ -2,7 +2,7 @@ return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
 
     -- GENERAL
-    use 'mrjones2014/nvim-ts-rainbow'
+    use 'HiPhish/rainbow-delimiters.nvim'
     use 'akinsho/toggleterm.nvim'
     use 'theprimeagen/harpoon'
     use 'nvim-tree/nvim-tree.lua'
@@ -42,7 +42,6 @@ return require('packer').startup(function(use)
     -- LANG
     use { 'nvim-telescope/telescope.nvim', tag = '0.1.0', requires = { { 'nvim-lua/plenary.nvim' } } }
     use 'nvim-telescope/telescope-dap.nvim'
-
 
     use { 'rcarriga/nvim-dap-ui', requires = { 'mfussenegger/nvim-dap' } }
     use 'jose-elias-alvarez/null-ls.nvim'

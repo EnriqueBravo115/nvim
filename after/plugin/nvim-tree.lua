@@ -8,6 +8,23 @@ require("nvim-tree").setup({
         }
     },
     filters = {
-        dotfiles = false,
+        dotfiles = true,
+    },
+    renderer = {
+        icons = {
+            glyphs = {
+                folder = {
+                    arrow_closed = "",
+                    arrow_open = "",
+                    default = "",
+                    open = "",
+                },
+                git = {
+                    staged = "",
+                    untracked = "󰊠",
+                    unstaged = ""
+                }
+            }
+        }
     }
 })

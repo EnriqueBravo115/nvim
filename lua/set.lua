@@ -34,4 +34,11 @@ vim.opt.colorcolumn = "80"
 
 vim.cmd("highlight ColorColumn guibg=#292a39")
 
-vim.cmd("highlight NvimTreeFolderIcon guifg=#ae81ff")
+vim.cmd("highlight NvimTreeFolderIcon guifg=#EF798A")
+vim.cmd("highlight NvimTreeIndentMarker guifg=#FCAB10")
+vim.cmd("highlight NvimTreeNormal guibg=#292a30")
+
+vim.cmd("highlight NvimTreeEndOfBuffer guifg=#292a30")
+
+vim.cmd("highlight NvimTreeCursorColumn guifg=#292a30")
+vim.cmd("highlight NvimTreeWinSeparator guifg=#292a30")

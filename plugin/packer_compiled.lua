@@ -134,6 +134,11 @@ _G.packer_plugins = {
     path = "/home/nullboy/.local/share/nvim/site/pack/packer/opt/hop.nvim",
     url = "https://github.com/phaazon/hop.nvim"
   },
+  ["image_preview.nvim"] = {
+    loaded = true,
+    path = "/home/nullboy/.local/share/nvim/site/pack/packer/start/image_preview.nvim",
+    url = "https://github.com/adelarsq/image_preview.nvim"
+  },
   ["indent-blankline.nvim"] = {
     loaded = true,
     path = "/home/nullboy/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
@@ -240,11 +245,6 @@ _G.packer_plugins = {
     path = "/home/nullboy/.local/share/nvim/site/pack/packer/start/nvim-treesitter-context",
     url = "https://github.com/nvim-treesitter/nvim-treesitter-context"
   },
-  ["nvim-ts-rainbow"] = {
-    loaded = true,
-    path = "/home/nullboy/.local/share/nvim/site/pack/packer/start/nvim-ts-rainbow",
-    url = "https://github.com/mrjones2014/nvim-ts-rainbow"
-  },
   ["nvim-web-devicons"] = {
     loaded = true,
     path = "/home/nullboy/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
@@ -259,6 +259,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/nullboy/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
+  },
+  ["rainbow-delimiters.nvim"] = {
+    loaded = true,
+    path = "/home/nullboy/.local/share/nvim/site/pack/packer/start/rainbow-delimiters.nvim",
+    url = "https://github.com/HiPhish/rainbow-delimiters.nvim"
   },
   rainbow_csv = {
     loaded = true,
