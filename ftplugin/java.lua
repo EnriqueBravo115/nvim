@@ -140,12 +140,12 @@ end
 
 require('dap.ext.vscode').load_launchjs()
 
---vim.api.nvim_create_autocmd({ "BufWritePost" }, {
---    pattern = { "*.java" },
---    callback = function()
---        local _, _ = pcall(vim.lsp.codelens.refresh)
---    end,
---})
+vim.api.nvim_create_autocmd({ "BufWritePost" }, {
+    pattern = { "*.java" },
+    callback = function()
+        local _, _ = pcall(vim.lsp.codelens.refresh)
+    end,
+})
 
 jdtls.start_or_attach(config)
 

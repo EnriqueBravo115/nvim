@@ -100,11 +100,6 @@ return require('packer').startup(function(use)
     use({ 'scalameta/nvim-metals', requires = { 'nvim-lua/plenary.nvim' } })
     use 'eandrju/cellular-automaton.nvim'
 
-    use 'Olical/conjure'
-    use 'clojure-vim/vim-jack-in'
-    use 'radenling/vim-dispatch-neovim'
-    use 'tpope/vim-dispatch'
-
     -- THEMES
     use { 'bluz71/vim-moonfly-colors', as = 'moonfly' }
 end)

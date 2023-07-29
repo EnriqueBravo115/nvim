@@ -42,3 +42,5 @@ vim.cmd("highlight NvimTreeEndOfBuffer guifg=#292a30")
 
 vim.cmd("highlight NvimTreeCursorColumn guifg=#292a30")
 vim.cmd("highlight NvimTreeWinSeparator guifg=#292a30")
+
+vim.cmd("let g:jukit_shell_cmd = 'ipython3'")

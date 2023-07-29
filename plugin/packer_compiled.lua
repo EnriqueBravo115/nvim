@@ -111,11 +111,6 @@ _G.packer_plugins = {
     path = "/home/nullboy/.local/share/nvim/site/pack/packer/start/cmp-vsnip",
     url = "https://github.com/hrsh7th/cmp-vsnip"
   },
-  conjure = {
-    loaded = true,
-    path = "/home/nullboy/.local/share/nvim/site/pack/packer/start/conjure",
-    url = "https://github.com/Olical/conjure"
-  },
   ["gitsigns.nvim"] = {
     loaded = true,
     path = "/home/nullboy/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
@@ -133,11 +128,6 @@ _G.packer_plugins = {
     only_cond = false,
     path = "/home/nullboy/.local/share/nvim/site/pack/packer/opt/hop.nvim",
     url = "https://github.com/phaazon/hop.nvim"
-  },
-  ["image_preview.nvim"] = {
-    loaded = true,
-    path = "/home/nullboy/.local/share/nvim/site/pack/packer/start/image_preview.nvim",
-    url = "https://github.com/adelarsq/image_preview.nvim"
   },
   ["indent-blankline.nvim"] = {
     loaded = true,
@@ -305,16 +295,6 @@ _G.packer_plugins = {
     path = "/home/nullboy/.local/share/nvim/site/pack/packer/start/vim-dadbod-ui",
     url = "https://github.com/kristijanhusak/vim-dadbod-ui"
   },
-  ["vim-dispatch"] = {
-    loaded = true,
-    path = "/home/nullboy/.local/share/nvim/site/pack/packer/start/vim-dispatch",
-    url = "https://github.com/tpope/vim-dispatch"
-  },
-  ["vim-dispatch-neovim"] = {
-    loaded = true,
-    path = "/home/nullboy/.local/share/nvim/site/pack/packer/start/vim-dispatch-neovim",
-    url = "https://github.com/radenling/vim-dispatch-neovim"
-  },
   ["vim-dotenv"] = {
     loaded = true,
     path = "/home/nullboy/.local/share/nvim/site/pack/packer/start/vim-dotenv",
@@ -324,11 +304,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/nullboy/.local/share/nvim/site/pack/packer/start/vim-fugitive",
     url = "https://github.com/tpope/vim-fugitive"
-  },
-  ["vim-jack-in"] = {
-    loaded = true,
-    path = "/home/nullboy/.local/share/nvim/site/pack/packer/start/vim-jack-in",
-    url = "https://github.com/clojure-vim/vim-jack-in"
   },
   ["vim-surround"] = {
     loaded = true,

@@ -1,5 +1,7 @@
 local lsp = require("lsp-zero")
 
+vim.api.nvim_set_hl(0, "CmpNormal", { bg = "#292a30" })
+
 lsp.preset("recommended")
 
 lsp.ensure_installed({
@@ -30,6 +32,18 @@ cmp.setup({
             end
         end,
     }),
+    window = {
+        completion = { -- rounded border; thin-style scrollbar
+            border = 'rounded',
+            scrollbar = '║',
+            winhighlight = "Normal:CmpNormal",
+        },
+        documentation = { -- no border; native-style scrollbar
+            border = nil,
+            scrollbar = '',
+            -- other options
+        },
+    },
 })
 
 vim.cmd [[autocmd BufWritePre * lua vim.lsp.buf.format()]]
@@ -64,7 +78,8 @@ cmp.setup({
                 Interface = "",
                 Method = "󰊕",
                 Class = "",
-                Text = "󰂡"
+                Text = "󰂡",
+                Snippet = "󰕣"
             }
         })
     }

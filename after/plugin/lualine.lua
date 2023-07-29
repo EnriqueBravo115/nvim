@@ -3,15 +3,15 @@ local colors = {
     blue   = '#80a0ff',
     cyan   = '#79dac8',
     black  = '#1F1F28',
-    white  = '#C8C093',
+    white  = '#06D6A0',
     red    = '#ff5189',
-    violet = '#d183e8',
+    violet = '#EF476F',
     grey   = '#254147',
-    k1     = '#00FFFFFF',
-    k2     = '#8B80F9',
-    k3     = '#f6c177',
-    k4     = '#2A2A37',
-    k5     = '#957FB8',
+    k1     = '#44475A',
+    k2     = '#FFD166',
+    k3     = '#06D6A0',
+    k4     = '#44475A',
+    k5     = '#a9a1e1',
     line   = '#392B58'
 }
 
@@ -46,11 +46,15 @@ require('lualine').setup {
     sections = {
         lualine_a = { { 'mode', icon = '' } },
         lualine_b = {
-            { 'branch', icon = '󰊤' },
-            { 'diff',   symbols = { added = ' ', modified = ' ', removed = '󰅜 ' } } },
+            { 'branch', icon = '󰘬' },
+            { 'diff',   symbols = { added = '+', modified = '~', removed = '-' } } },
         lualine_c = { { 'filename' }, },
         lualine_x = {
-            { 'location' }
+            { 'location' }, {
+            'fileformat',
+            symbols = {
+                unix = ' ' }
+        }
         },
         lualine_y = {},
         lualine_z = {}
