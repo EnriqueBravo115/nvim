@@ -39,7 +39,6 @@ return require('packer').startup(function(use)
         end,
     }
 
-    -- LANG
     use { 'nvim-telescope/telescope.nvim', tag = '0.1.0', requires = { { 'nvim-lua/plenary.nvim' } } }
     use 'nvim-telescope/telescope-dap.nvim'
 
@@ -48,7 +47,6 @@ return require('packer').startup(function(use)
 
     use 'mfussenegger/nvim-jdtls'
 
-    -- LSP
     use({
         'hrsh7th/nvim-cmp',
         requires = {
@@ -86,9 +84,9 @@ return require('packer').startup(function(use)
         tag = '*',
         requires = {
             'SmiteshP/nvim-navic',
-            'nvim-tree/nvim-web-devicons', -- optional dependency
+            'nvim-tree/nvim-web-devicons',
         },
-        after = 'nvim-web-devicons',       -- keep this if you're using NvChad
+        after = 'nvim-web-devicons',
     })
 
     use {

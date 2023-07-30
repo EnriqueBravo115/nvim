@@ -7,8 +7,8 @@ local colors = {
     red    = '#ff5189',
     violet = '#EF476F',
     grey   = '#254147',
-    k1     = '#44475A',
-    k2     = '#FFD166',
+    k1     = '#00FFFFFF',
+    k2     = '#ffb86c',
     k3     = '#06D6A0',
     k4     = '#44475A',
     k5     = '#a9a1e1',
@@ -50,11 +50,12 @@ require('lualine').setup {
             { 'diff',   symbols = { added = '+', modified = '~', removed = '-' } } },
         lualine_c = { { 'filename' }, },
         lualine_x = {
-            { 'location' }, {
-            'fileformat',
-            symbols = {
-                unix = ' ' }
-        }
+            {
+                'fileformat',
+                symbols = {
+                    unix = ' ' }
+            },
+            { 'location' }
         },
         lualine_y = {},
         lualine_z = {}
