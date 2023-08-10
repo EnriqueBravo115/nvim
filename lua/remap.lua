@@ -18,6 +18,8 @@ vim.keymap.set("n", "<leader>ww", "<cmd>:w<CR>")
 
 vim.keymap.set("v", "<leader>y", '"+y<CR>')
 
+vim.keymap.set("n", "<BS>", ':bp<CR>')
+
 -- JAVA
 vim.keymap.set("n", "<leader>r", "<cmd>term gradle run<CR>")
 vim.keymap.set("n", "<leader>zg", "<cmd>term gradle bootRun --debug-jvm<CR>")

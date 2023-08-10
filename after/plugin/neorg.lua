@@ -5,7 +5,7 @@ require('neorg').setup {
             config = {
                 icons = {
                     heading = {
-                        icons = { "✣", "○", "●", "⊚", "⊙" },
+                        icons = { "✥", "✿", "●", "⊚", "⊙" },
                     },
                     code_block = {
                         conceal = false

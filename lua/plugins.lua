@@ -21,8 +21,14 @@ return require('packer').startup(function(use)
 
     use 'mechatroner/rainbow_csv'
     use 'lewis6991/gitsigns.nvim'
-    use 'lukas-reineke/indent-blankline.nvim'
+    --use 'lukas-reineke/indent-blankline.nvim'
     use 'norcalli/nvim-colorizer.lua'
+    use {
+        'goolord/alpha-nvim',
+        config = function()
+            require 'alpha'.setup(require 'alpha.themes.dashboard'.config)
+        end
+    }
 
     use { 'kristijanhusak/vim-dadbod-ui',
         requires = { 'tpope/vim-dadbod',

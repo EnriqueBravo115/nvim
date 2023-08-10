@@ -43,11 +43,11 @@ local config = {
                 runtimes = {
                     {
                         name = "JavaSE-11",
-                        path = "/home/nullboy/.sdkman/candidates/java/11.0.19-tem"
+                        path = "/home/nullboy/.sdkman/candidates/java/11.0.20-tem"
                     },
                     {
                         name = "JavaSE-1.8",
-                        path = "/home/nullboy/.sdkman/candidates/java/8.0.372-tem"
+                        path = "/home/nullboy/.sdkman/candidates/java/8.0.382-tem"
                     }
                 },
                 updateBuildConfiguration = "interactive",
@@ -140,12 +140,12 @@ end
 
 require('dap.ext.vscode').load_launchjs()
 
-vim.api.nvim_create_autocmd({ "BufWritePost" }, {
-    pattern = { "*.java" },
-    callback = function()
-        local _, _ = pcall(vim.lsp.codelens.refresh)
-    end,
-})
+--vim.api.nvim_create_autocmd({ "BufWritePost" }, {
+--    pattern = { "*.java" },
+--    callback = function()
+--        local _, _ = pcall(vim.lsp.codelens.refresh)
+--    end,
+--})
 
 jdtls.start_or_attach(config)
 

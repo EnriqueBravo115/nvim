@@ -3,7 +3,7 @@ local colors = {
     blue   = '#80a0ff',
     cyan   = '#79dac8',
     black  = '#1F1F28',
-    white  = '#06D6A0',
+    white  = '#e3c78a',
     red    = '#ff5189',
     violet = '#EF476F',
     grey   = '#254147',
@@ -47,14 +47,14 @@ require('lualine').setup {
         lualine_a = { { 'mode', icon = '' } },
         lualine_b = {
             { 'branch', icon = '󰘬' },
-            { 'diff',   symbols = { added = '+', modified = '~', removed = '-' } } },
+            { 'diff', symbols = { added = '󰋠 ', modified = '󱗜 ', removed = '󰍵 ' } } },
         lualine_c = { { 'filename' }, },
         lualine_x = {
-            {
-                'fileformat',
-                symbols = {
-                    unix = ' ' }
-            },
+            --            {
+            --                'fileformat',
+            --                symbols = {
+            --                    unix = '' }
+            --            },
             { 'location' }
         },
         lualine_y = {},
