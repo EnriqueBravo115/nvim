@@ -2,4 +2,4 @@
 
 Simple java configuration, nothing of dumb configurations
 
-![general](./resources/home.png)
+![general](./resources/dap.png)
