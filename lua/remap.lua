@@ -18,8 +18,6 @@ vim.keymap.set("n", "<leader>ww", "<cmd>:w<CR>")
 
 vim.keymap.set("v", "<leader>y", '"+y<CR>')
 
-vim.keymap.set("n", "<BS>", ':bp<CR>')
-
 -- JAVA
 vim.keymap.set("n", "<leader>r", "<cmd>term gradle run<CR>")
 vim.keymap.set("n", "<leader>zg", "<cmd>term gradle bootRun --debug-jvm<CR>")
@@ -41,4 +39,8 @@ end)
 
 map("n", "<leader>dsi", function()
     require("dap").step_into()
+end)
+
+map("n", "<leader>dr", function()
+    require("dap").repl.toggle()
 end)

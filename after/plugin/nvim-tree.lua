@@ -22,9 +22,9 @@ require("nvim-tree").setup({
                     empty_open = "⌈⌋"
                 },
                 git = {
-                    staged = "",
-                    untracked = "󰊠",
-                    unstaged = ""
+                    staged = "⊙",
+                    untracked = "⊙",
+                    unstaged = "⊙"
                 }
             }
         }

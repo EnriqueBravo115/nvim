@@ -50,11 +50,11 @@ require('lualine').setup {
             { 'diff', symbols = { added = '󰋠 ', modified = '󱗜 ', removed = '󰍵 ' } } },
         lualine_c = { { 'filename' }, },
         lualine_x = {
-            --            {
-            --                'fileformat',
-            --                symbols = {
-            --                    unix = '' }
-            --            },
+            {
+                'fileformat',
+                symbols = {
+                    unix = '' }
+            },
             { 'location' }
         },
         lualine_y = {},
