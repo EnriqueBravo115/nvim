@@ -1,7 +1,34 @@
---vim.g.indent_blankline_char = "¦"
---vim.g.indent_blankline_use_treesitter = true
+--local highlight = {
+--  "RainbowRed",
+--  "RainbowYellow",
+--  "RainbowBlue",
+--  "RainbowOrange",
+--  "RainbowGreen",
+--  "RainbowViolet",
+--  "RainbowCyan",
+--}
 --
---require("indent_blankline").setup {
---    show_trailing_blankline_indent = false,
---    --    show_current_context = true,
+--local hooks = require "ibl.hooks"
+--
+--hooks.register(hooks.type.HIGHLIGHT_SETUP, function()
+--  vim.api.nvim_set_hl(0, "RainbowRed", { fg = "#002731" })
+--  vim.api.nvim_set_hl(0, "RainbowYellow", { fg = "#002731" })
+--  vim.api.nvim_set_hl(0, "RainbowBlue", { fg = "#002731" })
+--  vim.api.nvim_set_hl(0, "RainbowOrange", { fg = "#002731" })
+--  vim.api.nvim_set_hl(0, "RainbowGreen", { fg = "#002731" })
+--  vim.api.nvim_set_hl(0, "RainbowViolet", { fg = "#002731" })
+--  vim.api.nvim_set_hl(0, "RainbowCyan", { fg = "#002731" })
+--end)
+--
+--require("ibl").setup {
+--  -- indent = { highlight = highlight },
+--  whitespace = {
+--    remove_blankline_trail = true,
+--  },
+--  scope = { enabled = false },
+--  exclude = {
+--    filetypes = {
+--      "vimwiki",
+--    }
+--  }
 --}

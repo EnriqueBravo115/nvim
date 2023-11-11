@@ -21,6 +21,7 @@ vim.keymap.set("v", "<leader>y", '"+y<CR>')
 -- JAVA
 vim.keymap.set("n", "<leader>r", "<cmd>term gradle run<CR>")
 vim.keymap.set("n", "<leader>zg", "<cmd>term gradle bootRun --debug-jvm<CR>")
+vim.keymap.set("n", "<leader>g", "<cmd>term mvn exec:java -q<CR>")
 
 -- DAP
 map("n", "<leader>as", vim.diagnostic.setloclist)

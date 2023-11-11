@@ -2,9 +2,9 @@ vim.opt.guicursor = ""
 vim.opt.nu = true
 vim.opt.relativenumber = true
 
-vim.opt.tabstop = 4
-vim.opt.softtabstop = 4
-vim.opt.shiftwidth = 4
+vim.opt.tabstop = 2
+vim.opt.softtabstop = 2
+vim.opt.shiftwidth = 2
 vim.opt.expandtab = true
 vim.opt.showmode = false
 
@@ -28,20 +28,12 @@ vim.opt.updatetime = 50
 
 vim.opt.conceallevel = 2
 
-vim.cmd("let g:indent_blankline_filetype_exclude = ['norg']")
+vim.cmd("set concealcursor=nc")
 
 vim.opt.colorcolumn = "80"
 
-vim.cmd("highlight ColorColumn guibg=#282a3e")
+vim.cmd("highlight ColorColumn guibg=#303035")
 
-vim.cmd("highlight NvimTreeFolderIcon guifg=#ae81ff")
-vim.cmd("highlight NvimTreeIndentMarker guifg=#FCAB10")
-vim.cmd("highlight NvimTreeNormal guibg=#292a30")
+vim.cmd("hi EndOfBuffer guibg=#303030 guifg=#303030")
 
-vim.cmd("highlight NvimTreeEndOfBuffer guifg=#292a30")
-
-vim.cmd("highlight NvimTreeCursorColumn guifg=#292a30")
-vim.cmd("highlight NvimTreeWinSeparator guifg=#292a30")
 vim.cmd("let g:powerline_loaded = 1")
-
-vim.cmd("hi EndOfBuffer guibg=#292a30 guifg=#292a30")
