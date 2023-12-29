@@ -20,6 +20,7 @@ vim.keymap.set("n", "<leader>zt", "<cmd>tabnew %<CR>")
 vim.keymap.set("n", "<leader>ww", "<cmd>:w<CR>")
 vim.keymap.set("n", "<leader>m", "<cmd>:MarkdownPreview<CR>")
 vim.keymap.set("n", "<leader>d", "<cmd>term go run .<CR>")
+vim.keymap.set("n", "<leader>u", ":UndotreeToggle<CR>")
 
 vim.keymap.set("v", "<leader>y", '"+y<CR>')
 

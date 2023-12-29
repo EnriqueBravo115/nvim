@@ -5,7 +5,7 @@ return require('packer').startup(function(use)
   use 'akinsho/toggleterm.nvim'
   use 'nvim-tree/nvim-tree.lua'
   use 'nvim-tree/nvim-web-devicons'
-  use "lukas-reineke/indent-blankline.nvim"
+  use 'lukas-reineke/indent-blankline.nvim'
   use 'jiangmiao/auto-pairs'
   use 'lewis6991/gitsigns.nvim'
   use 'HiPhish/rainbow-delimiters.nvim'
@@ -42,22 +42,12 @@ return require('packer').startup(function(use)
   use 'tpope/vim-fugitive'
   use 'vimwiki/vimwiki'
   use 'theprimeagen/harpoon'
-
+  use 'mbbill/undotree'
 
   use { 'kristijanhusak/vim-dadbod-ui',
     requires = { 'tpope/vim-dadbod',
       'tpope/vim-dotenv',
       'kristijanhusak/vim-dadbod-completion' } }
-
-  use {
-    'phaazon/hop.nvim',
-    event = 'BufRead',
-    config = function()
-      require('hop').setup()
-      vim.api.nvim_set_keymap('n', 's', ':HopChar2<cr>', { silent = true })
-      vim.api.nvim_set_keymap('n', 'S', ':HopWord<cr>', { silent = true })
-    end,
-  }
 
   use { 'nvim-telescope/telescope.nvim', tag = '0.1.4', requires = { { 'nvim-lua/plenary.nvim' } } }
   use 'nvim-telescope/telescope-dap.nvim'
