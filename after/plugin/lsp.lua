@@ -3,8 +3,8 @@ local lsp = require("lsp-zero")
 local capabilities = require('cmp_nvim_lsp')
     .default_capabilities(vim.lsp.protocol.make_client_capabilities())
 
-vim.api.nvim_set_hl(0, "CmpNormal", { bg = "#303030" })
-vim.api.nvim_set_hl(0, "NormalFloat", { bg = "#303030" })
+vim.api.nvim_set_hl(0, "CmpNormal", { bg = "#0f0a01" })
+vim.api.nvim_set_hl(0, "NormalFloat", { bg = "#0f0a01" })
 
 lsp.preset("recommended")
 
@@ -97,7 +97,7 @@ cmp.setup({
 })
 
 vim.diagnostic.config({
-  virtual_text = false
+  virtual_text = true
 })
 
 vim.cmd [[autocmd BufWritePre * lua vim.lsp.buf.format()]]

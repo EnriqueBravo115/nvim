@@ -2,6 +2,9 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = ","
 local map = vim.keymap.set
 
+vim.keymap.set("n", "n", "nzzzv")
+vim.keymap.set("n", "N", "Nzzzv")
+
 -- TELESCOPE
 vim.keymap.set("n", "<leader>lc", "<cmd>:lua require'telescope'.extensions.dap.commands{}<CR>")
 vim.keymap.set("n", "<leader>lb", "<cmd>:lua require'telescope'.extensions.dap.list_breakpoints{}<CR>")
@@ -15,6 +18,8 @@ vim.keymap.set("n", "<leader>e", "<cmd>:NvimTreeToggle<CR>")
 vim.keymap.set("n", "<leader>x", "<cmd>bw<CR>")
 vim.keymap.set("n", "<leader>zt", "<cmd>tabnew %<CR>")
 vim.keymap.set("n", "<leader>ww", "<cmd>:w<CR>")
+vim.keymap.set("n", "<leader>m", "<cmd>:MarkdownPreview<CR>")
+vim.keymap.set("n", "<leader>d", "<cmd>term go run .<CR>")
 
 vim.keymap.set("v", "<leader>y", '"+y<CR>')
 
@@ -27,21 +32,21 @@ vim.keymap.set("n", "<leader>g", "<cmd>term mvn exec:java -q<CR>")
 map("n", "<leader>as", vim.diagnostic.setloclist)
 
 map("n", "<leader>dc", function()
-    require("dap").continue()
+  require("dap").continue()
 end)
 
 map("n", "<leader>dt", function()
-    require("dap").toggle_breakpoint()
+  require("dap").toggle_breakpoint()
 end)
 
 map("n", "<leader>dso", function()
-    require("dap").step_over()
+  require("dap").step_over()
 end)
 
 map("n", "<leader>dsi", function()
-    require("dap").step_into()
+  require("dap").step_into()
 end)
 
 map("n", "<leader>dr", function()
-    require("dap").repl.toggle()
+  require("dap").repl.toggle()
 end)

@@ -1,52 +1,21 @@
-local status, n = pcall(require, "neosolarized")
-if (not status) then return end
-
-n.setup({
-  comment_italics = true,
+require('rose-pine').setup({
+  variant = 'auto',
+  dark_variant = 'main',
+  bold_vert_split = false,
+  dim_nc_background = false,
+  disable_background = true,
+  disable_float_background = true,
+  disable_italics = true,
 })
 
-local cb = require('colorbuddy.init')
-local Color = cb.Color
-local colors = cb.colors
-local Group = cb.Group
-local groups = cb.groups
-local styles = cb.styles
+function ColorMyPencils(color)
+  color = color or "rose-pine"
+  vim.cmd.colorscheme(color)
 
-Color.new('white', '#ffffff')
-Color.new('black', '#000000')
-Group.new('Normal', colors.base1, colors.NONE, styles.NONE)
-Group.new('CursorLine', colors.none, colors.base03, styles.NONE, colors.base1)
-Group.new('CursorLineNr', colors.yellow, colors.black, styles.NONE, colors.base1)
-Group.new('Visual', colors.none, colors.base03, styles.reverse)
-Group.new('NormalFloat', colors.base1, colors.NONE, styles.NONE)
+  vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+  vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+end
 
-local cError = groups.Error.fg
-local cInfo = groups.Information.fg
-local cWarn = groups.Warning.fg
-local cHint = groups.Hint.fg
+ColorMyPencils()
 
-Group.new("DiagnosticVirtualTextError", cError, cError:dark():dark():dark():dark(), styles.NONE)
-Group.new("DiagnosticVirtualTextInfo", cInfo, cInfo:dark():dark():dark(), styles.NONE)
-Group.new("DiagnosticVirtualTextWarn", cWarn, cWarn:dark():dark():dark(), styles.NONE)
-Group.new("DiagnosticVirtualTextHint", cHint, cHint:dark():dark():dark(), styles.NONE)
-Group.new("DiagnosticUnderlineError", colors.none, colors.none, styles.undercurl, cError)
-Group.new("DiagnosticUnderlineWarn", colors.none, colors.none, styles.undercurl, cWarn)
-Group.new("DiagnosticUnderlineInfo", colors.none, colors.none, styles.undercurl, cInfo)
-Group.new("DiagnosticUnderlineHint", colors.none, colors.none, styles.undercurl, cHint)
-
-Group.new("HoverBorder", colors.yellow, colors.none, styles.NONE)
-
-local custom_highlight = vim.api.nvim_create_augroup("CustomHighlight", {})
-vim.api.nvim_create_autocmd("ColorScheme", {
-  pattern = "moonfly",
-  callback = function()
-    vim.api.nvim_set_hl(0, "String", { fg = "#ae81ff" })
-    vim.api.nvim_set_hl(0, "Type", { fg = "#ff7ab2" })
-  end,
-  group = custom_highlight,
-})
-
-vim.g.moonflyTransparent = true
-vim.g.moonflyItalics = true
-
-vim.cmd("colorscheme moonfly")
+vim.cmd('colorscheme rose-pine')

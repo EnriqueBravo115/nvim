@@ -2,34 +2,47 @@ return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
 
   -- GENERAL
-  use 'HiPhish/rainbow-delimiters.nvim'
   use 'akinsho/toggleterm.nvim'
-  use 'theprimeagen/harpoon'
   use 'nvim-tree/nvim-tree.lua'
   use 'nvim-tree/nvim-web-devicons'
-  use 'folke/zen-mode.nvim'
-  use 'tpope/vim-fugitive'
-  use({ 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' })
-  use 'nvim-treesitter/nvim-treesitter-context'
+  use "lukas-reineke/indent-blankline.nvim"
+  use 'jiangmiao/auto-pairs'
+  use 'lewis6991/gitsigns.nvim'
+  use 'HiPhish/rainbow-delimiters.nvim'
+  use 'norcalli/nvim-colorizer.lua'
+  use 'rose-pine/neovim'
+
   use {
     'nvim-lualine/lualine.nvim',
     requires = { 'nvim-tree/nvim-web-devicons', opt = true }
   }
-  use 'xiyaowong/transparent.nvim'
-  use "lukas-reineke/indent-blankline.nvim"
-  use 'jiangmiao/auto-pairs'
-  use 'windwp/nvim-ts-autotag'
-  use 'vimwiki/vimwiki'
 
-  --use 'mechatroner/rainbow_csv'
-  use 'lewis6991/gitsigns.nvim'
-  use 'norcalli/nvim-colorizer.lua'
+  use({ 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' })
+  use 'nvim-treesitter/nvim-treesitter-context'
+  use 'windwp/nvim-ts-autotag'
+
   use {
     'goolord/alpha-nvim',
     config = function()
       require 'alpha'.setup(require 'alpha.themes.dashboard'.config)
     end
   }
+
+  use({
+    'utilyre/barbecue.nvim',
+    tag = '*',
+    requires = {
+      'SmiteshP/nvim-navic',
+      'nvim-tree/nvim-web-devicons',
+    },
+    after = 'nvim-web-devicons',
+  })
+
+  -- TOOLS
+  use 'tpope/vim-fugitive'
+  use 'vimwiki/vimwiki'
+  use 'theprimeagen/harpoon'
+
 
   use { 'kristijanhusak/vim-dadbod-ui',
     requires = { 'tpope/vim-dadbod',
@@ -46,22 +59,14 @@ return require('packer').startup(function(use)
     end,
   }
 
-  use { 'nvim-telescope/telescope.nvim', tag = '0.1.0', requires = { { 'nvim-lua/plenary.nvim' } } }
+  use { 'nvim-telescope/telescope.nvim', tag = '0.1.4', requires = { { 'nvim-lua/plenary.nvim' } } }
   use 'nvim-telescope/telescope-dap.nvim'
 
   use { 'rcarriga/nvim-dap-ui', requires = { 'mfussenegger/nvim-dap' } }
   use 'jose-elias-alvarez/null-ls.nvim'
 
+  -- LANG
   use 'mfussenegger/nvim-jdtls'
-
-  use({
-    'hrsh7th/nvim-cmp',
-    requires = {
-      { 'hrsh7th/cmp-nvim-lsp' },
-      { 'hrsh7th/cmp-vsnip' },
-      { 'hrsh7th/vim-vsnip' },
-    },
-  })
 
   use {
     'VonHeikemen/lsp-zero.nvim',
@@ -82,31 +87,9 @@ return require('packer').startup(function(use)
       { 'L3MON4D3/LuaSnip' },     -- Required
       { 'onsails/lspkind.nvim' },
       { 'hrsh7th/cmp-path' },
-      { 'hrsh7th/cmp-buffer' }
+      { 'hrsh7th/cmp-buffer' },
+      { 'hrsh7th/cmp-vsnip' },
+      { 'hrsh7th/vim-vsnip' },
     }
   }
-  use({
-    'utilyre/barbecue.nvim',
-    tag = '*',
-    requires = {
-      'SmiteshP/nvim-navic',
-      'nvim-tree/nvim-web-devicons',
-    },
-    after = 'nvim-web-devicons',
-  })
-
-  use({ 'scalameta/nvim-metals', requires = { 'nvim-lua/plenary.nvim' } })
-
-  use 'Olical/conjure'
-  use 'tpope/vim-dispatch'
-  use 'clojure-vim/vim-jack-in'
-  use 'radenling/vim-dispatch-neovim'
-
-  -- THEMES
-  use {
-    'svrana/neosolarized.nvim',
-    requires = { 'tjdevries/colorbuddy.nvim' }
-  }
-
-  use 'bluz71/vim-moonfly-colors'
 end)

@@ -11,12 +11,13 @@ local workspace_folder = home .. "/.cache/jdtls/workspace" .. vim.fn.fnamemodify
 
 local bundles = {
   vim.fn.glob(
-    home .. '/Applications/java-debug/com.microsoft.java.debug.plugin/target/com.microsoft.java.debug.plugin-*.jar',
+    home ..
+    '/.local/share/nvim/mason/packages/java-debug-adapter/extension/server/com.microsoft.java.debug.plugin-0.47.0.jar',
     "\n")
 }
 
 vim.list_extend(bundles,
-  vim.split(vim.fn.glob(home .. "/Applications/vscode-java-test/server/*.jar"), '\n'))
+  vim.split(vim.fn.glob(home .. "/.local/share/nvim/mason/packages/java-test/extension/server/*.jar"), '\n'))
 
 local extendedClientCapabilities = jdtls.extendedClientCapabilities
 extendedClientCapabilities.resolveAdditionalTextEditsSupport = true
@@ -68,7 +69,7 @@ local config = {
       },
       inlayHints = {
         parameterNames = {
-          enabled = "all",           -- literals, all, none
+          enabled = "all", -- literals, all, none
         },
       },
       completion = {
@@ -123,8 +124,8 @@ local config = {
     "-javaagent:" .. home .. "/Applications/lombok.jar",
     '-jar',
     vim.fn.glob(
-      "/home/nullboy/Applications/jdtls/plugins/org.eclipse.equinox.launcher_1.6.400.v20210924-0641.jar"),
-    "-configuration", "/home/nullboy/Applications/jdtls/config_linux/",
+      "/home/nullboy/Applications/jdt29/plugins/org.eclipse.equinox.launcher_*.jar"),
+    "-configuration", "/home/nullboy/Applications/jdt29/config_linux/",
     '-data', workspace_folder,
   },
   init_options = {
