@@ -97,7 +97,7 @@ cmp.setup({
 })
 
 vim.diagnostic.config({
-  virtual_text = true
+  virtual_text = false
 })
 
 vim.cmd [[autocmd BufWritePre * lua vim.lsp.buf.format()]]
