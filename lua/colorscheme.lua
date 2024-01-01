@@ -8,8 +8,10 @@ require('rose-pine').setup({
   disable_italics = true,
 
   highlight_groups = {
-    String = { fg = '#36c692' },
-    Number = { fg = '#ff7bbb' }
+    Number = { fg = '#ff7bbb' },
+    GitSignsAdd = { fg = '#9ccfd8' },
+    GitSignsChange = { fg = '#e3c78a' },
+    GitSignsDelete = { fg = '#eb6f92' }
   }
 })
 

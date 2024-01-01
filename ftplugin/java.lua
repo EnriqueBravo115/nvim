@@ -17,7 +17,7 @@ local bundles = {
 }
 
 vim.list_extend(bundles,
-  vim.split(vim.fn.glob(home .. "/.local/share/nvim/mason/packages/java-test/extension/server/*.jar"), '\n'))
+  vim.split(vim.fn.glob(home .. "~/Applications//server/*.jar"), '\n'))
 
 local extendedClientCapabilities = jdtls.extendedClientCapabilities
 extendedClientCapabilities.resolveAdditionalTextEditsSupport = true
@@ -124,8 +124,8 @@ local config = {
     "-javaagent:" .. home .. "/Applications/lombok.jar",
     '-jar',
     vim.fn.glob(
-      "/home/nullboy/Applications/jdt29/plugins/org.eclipse.equinox.launcher_*.jar"),
-    "-configuration", "/home/nullboy/Applications/jdt29/config_linux/",
+      "/home/nullboy/Applications/jdt30/plugins/org.eclipse.equinox.launcher_*.jar"),
+    "-configuration", "/home/nullboy/Applications/jdt30/config_linux/",
     '-data', workspace_folder,
   },
   init_options = {

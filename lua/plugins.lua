@@ -5,12 +5,10 @@ return require('packer').startup(function(use)
   use 'akinsho/toggleterm.nvim'
   use 'nvim-tree/nvim-tree.lua'
   use 'nvim-tree/nvim-web-devicons'
-  use 'lukas-reineke/indent-blankline.nvim'
-  use 'jiangmiao/auto-pairs'
   use 'lewis6991/gitsigns.nvim'
-  use 'HiPhish/rainbow-delimiters.nvim'
   use 'norcalli/nvim-colorizer.lua'
   use 'rose-pine/neovim'
+  use 'jiangmiao/auto-pairs'
 
   use {
     'nvim-lualine/lualine.nvim',
@@ -20,23 +18,6 @@ return require('packer').startup(function(use)
   use({ 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' })
   use 'nvim-treesitter/nvim-treesitter-context'
   use 'windwp/nvim-ts-autotag'
-
-  use {
-    'goolord/alpha-nvim',
-    config = function()
-      require 'alpha'.setup(require 'alpha.themes.dashboard'.config)
-    end
-  }
-
-  use({
-    'utilyre/barbecue.nvim',
-    tag = '*',
-    requires = {
-      'SmiteshP/nvim-navic',
-      'nvim-tree/nvim-web-devicons',
-    },
-    after = 'nvim-web-devicons',
-  })
 
   -- TOOLS
   use 'tpope/vim-fugitive'

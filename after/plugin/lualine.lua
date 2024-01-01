@@ -1,32 +1,26 @@
 local Colors = {
-  white        = '#ffffff',
-  darkestgreen = '#005f00',
-  brightgreen  = '#afdf00',
-  darkestcyan  = '#005f5f',
-  mediumcyan   = '#87dfff',
-  darkestblue  = '#005f87',
-  darkred      = '#870000',
-  brightred    = '#df0000',
+  violet       = '#c4a7e7',
+  black        = '#000000',
   brightorange = '#ff8700',
   gray1        = '#262626',
-  gray2        = '#303030',
-  gray4        = '#585858',
-  gray5        = '#606060',
+  gray5        = '#2c2c2c',
   gray7        = '#9e9e9e',
   gray10       = '#f0f0f0',
   t            = '#00FFFFFF',
-  green        = '#06D6A0'
+  green        = '#06D6A0',
+  pine         = '#fb4934',
+  foam         = '#9ccfd8',
 }
 
 local powerline = {
   normal = {
-    a = { fg = Colors.darkestgreen, bg = Colors.brightgreen, gui = 'bold' },
+    a = { fg = Colors.black, bg = Colors.violet, gui = 'bold' },
     b = { fg = Colors.gray10, bg = Colors.gray5 },
     c = { fg = Colors.gray7, bg = Colors.t },
   },
-  insert = { a = { fg = Colors.darkred, bg = Colors.brightorange, gui = 'bold' }, },
-  visual = { a = { fg = Colors.darkestcyan, bg = Colors.green, gui = 'bold' } },
-  replace = { a = { fg = Colors.white, bg = Colors.green, gui = 'bold' } },
+  insert = { a = { fg = Colors.black, bg = Colors.brightorange, gui = 'bold' }, },
+  visual = { a = { fg = Colors.black, bg = Colors.green, gui = 'bold' } },
+  command = { a = { fg = Colors.black, bg = Colors.pine, gui = 'bold' } },
   inactive = {
     a = { fg = Colors.gray1, bg = Colors.t, gui = 'bold' },
     b = { fg = Colors.gray1, bg = Colors.t },
@@ -53,8 +47,15 @@ require('lualine').setup {
     },
     lualine_c = { { 'filename' } },
     lualine_x = {
+      {
+        'fileformat',
+        symbols = {
+          unix = '', -- e712
+        }
+      }
     },
     lualine_y = {
+
     },
     lualine_z = {
       { 'location' }
