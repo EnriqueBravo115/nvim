@@ -15,5 +15,3 @@ vim.cmd("hi VimwikiHeader1 guifg=#afff00 gui=bold")
 vim.cmd("hi VimwikiHeader2 guifg=#87ffff gui=bold")
 vim.cmd("hi VimwikiHeader3 guifg=#98BB6C gui=bold")
 vim.cmd("hi VimwikiHeader4 guifg=#938AA9 gui=bold")
-
-vim.cmd("autocmd FileType vimwiki hi VimwikiCodeBlock guibg=#FFFFCC")

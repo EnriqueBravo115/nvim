@@ -1,4 +1,7 @@
 local dap = require('dap')
+vim.g.mapleader = " "
+vim.g.maplocalleader = ","
+local map = vim.keymap.set
 
 dap.configurations.java = {
   {
@@ -53,16 +56,16 @@ require("dapui").setup({
     },
   },
   floating = {
-    max_height = nil,      -- These can be integers or a float between 0 and 1.
-    max_width = nil,       -- Floats will be treated as percentage of your screen.
-    border = "single",     -- Border style. Can be "single", "double" or "rounded"
+    max_height = nil,  -- These can be integers or a float between 0 and 1.
+    max_width = nil,   -- Floats will be treated as percentage of your screen.
+    border = "single", -- Border style. Can be "single", "double" or "rounded"
     mappings = {
       close = { "q", "<Esc>" },
     },
   },
   windows = { indent = 1 },
   render = {
-    max_type_length = nil,     -- Can be integer or nil.
+    max_type_length = nil, -- Can be integer or nil.
   }
 })
 
@@ -76,3 +79,21 @@ end
 dap.listeners.before.event_exited["dapui_config"] = function()
   dapui.close()
 end
+
+-- DAP
+map("n", "<leader>as", vim.diagnostic.setloclist)
+map("n", "<leader>dc", function()
+  require("dap").continue()
+end)
+map("n", "<leader>dt", function()
+  require("dap").toggle_breakpoint()
+end)
+map("n", "<leader>dso", function()
+  require("dap").step_over()
+end)
+map("n", "<leader>dsi", function()
+  require("dap").step_into()
+end)
+map("n", "<leader>dr", function()
+  require("dap").repl.toggle()
+end)

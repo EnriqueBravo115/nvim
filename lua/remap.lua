@@ -15,39 +15,7 @@ vim.keymap.set("n", "<leader><leader>dq", ":tabclose<cr>", {})
 
 -- COMMANDS
 vim.keymap.set("n", "<leader>e", "<cmd>:NvimTreeToggle<CR>")
-vim.keymap.set("n", "<leader>x", "<cmd>bw<CR>")
-vim.keymap.set("n", "<leader>zt", "<cmd>tabnew %<CR>")
-vim.keymap.set("n", "<leader>ww", "<cmd>:w<CR>")
 vim.keymap.set("n", "<leader>m", "<cmd>:MarkdownPreview<CR>")
-vim.keymap.set("n", "<leader>d", "<cmd>term go run .<CR>")
 vim.keymap.set("n", "<leader>u", ":UndotreeToggle<CR>")
-
 vim.keymap.set("v", "<leader>y", '"+y<CR>')
-
--- JAVA
-vim.keymap.set("n", "<leader>r", "<cmd>term gradle run<CR>")
 vim.keymap.set("n", "<leader>zg", "<cmd>term gradle bootRun --debug-jvm<CR>")
-vim.keymap.set("n", "<leader>g", "<cmd>term mvn exec:java -q<CR>")
-
--- DAP
-map("n", "<leader>as", vim.diagnostic.setloclist)
-
-map("n", "<leader>dc", function()
-  require("dap").continue()
-end)
-
-map("n", "<leader>dt", function()
-  require("dap").toggle_breakpoint()
-end)
-
-map("n", "<leader>dso", function()
-  require("dap").step_over()
-end)
-
-map("n", "<leader>dsi", function()
-  require("dap").step_into()
-end)
-
-map("n", "<leader>dr", function()
-  require("dap").repl.toggle()
-end)
