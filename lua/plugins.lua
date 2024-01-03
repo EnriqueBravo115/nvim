@@ -19,6 +19,16 @@ return require('packer').startup(function(use)
   use 'nvim-treesitter/nvim-treesitter-context'
   use 'windwp/nvim-ts-autotag'
 
+  use({
+    'utilyre/barbecue.nvim',
+    tag = '*',
+    requires = {
+      'SmiteshP/nvim-navic',
+      'nvim-tree/nvim-web-devicons',
+    },
+    after = 'nvim-web-devicons',
+  })
+
   -- TOOLS
   use 'tpope/vim-fugitive'
   use 'vimwiki/vimwiki'
@@ -36,8 +46,16 @@ return require('packer').startup(function(use)
   use { 'rcarriga/nvim-dap-ui', requires = { 'mfussenegger/nvim-dap' } }
   use 'jose-elias-alvarez/null-ls.nvim'
 
+  use 'theHamsta/nvim-dap-virtual-text'
+
+  use({
+    "iamcco/markdown-preview.nvim",
+    run = function() vim.fn["mkdp#util#install"]() end,
+  })
+
   -- LANG
   use 'mfussenegger/nvim-jdtls'
+  use 'leoluz/nvim-dap-go'
 
   use {
     'VonHeikemen/lsp-zero.nvim',

@@ -47,11 +47,11 @@ local config = {
         runtimes = {
           {
             name = "JavaSE-11",
-            path = "/home/nullboy/.sdkman/candidates/java/11.0.20-tem"
+            path = "/home/nullboy/.sdkman/candidates/java/11.0.21-tem"
           },
           {
             name = "JavaSE-1.8",
-            path = "/home/nullboy/.sdkman/candidates/java/8.0.382-tem"
+            path = "/home/nullboy/.sdkman/candidates/java/8.0.392-tem"
           }
         },
         updateBuildConfiguration = "interactive",
@@ -121,11 +121,11 @@ local config = {
     '--add-modules=ALL-SYSTEM',
     '--add-opens', 'java.base/java.util=ALL-UNNAMED',
     '--add-opens', 'java.base/java.lang=ALL-UNNAMED',
-    "-javaagent:" .. home .. "/Applications/lombok.jar",
+    "-javaagent:" .. home .. "/Apps/lombok.jar",
     '-jar',
     vim.fn.glob(
-      "/home/nullboy/Applications/jdt30/plugins/org.eclipse.equinox.launcher_*.jar"),
-    "-configuration", "/home/nullboy/Applications/jdt30/config_linux/",
+      "/home/nullboy/Apps/jdt30/plugins/org.eclipse.equinox.launcher_*.jar"),
+    "-configuration", "/home/nullboy/Apps/jdt30/config_linux/",
     '-data', workspace_folder,
   },
   init_options = {
