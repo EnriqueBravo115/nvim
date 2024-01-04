@@ -121,11 +121,11 @@ local config = {
     '--add-modules=ALL-SYSTEM',
     '--add-opens', 'java.base/java.util=ALL-UNNAMED',
     '--add-opens', 'java.base/java.lang=ALL-UNNAMED',
-    "-javaagent:" .. home .. "/Apps/lombok.jar",
+    "-javaagent:" .. home .. "/Applications/lombok.jar",
     '-jar',
     vim.fn.glob(
-      "/home/nullboy/Apps/jdt30/plugins/org.eclipse.equinox.launcher_*.jar"),
-    "-configuration", "/home/nullboy/Apps/jdt30/config_linux/",
+      "/home/nullboy/Applications/jdt30/plugins/org.eclipse.equinox.launcher_*.jar"),
+    "-configuration", "/home/nullboy/Applications/jdt30/config_linux/",
     '-data', workspace_folder,
   },
   init_options = {
