@@ -9,6 +9,8 @@ return require('packer').startup(function(use)
   use 'norcalli/nvim-colorizer.lua'
   use 'rose-pine/neovim'
   use 'jiangmiao/auto-pairs'
+  use 'HiPhish/rainbow-delimiters.nvim'
+  use "lukas-reineke/indent-blankline.nvim"
 
   use {
     'nvim-lualine/lualine.nvim',

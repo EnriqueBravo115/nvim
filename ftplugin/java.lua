@@ -17,7 +17,7 @@ local bundles = {
 }
 
 vim.list_extend(bundles,
-  vim.split(vim.fn.glob(home .. "~/Applications//server/*.jar"), '\n'))
+  vim.split(vim.fn.glob(home .. "~/.local/share/nvim/mason/share/java-test/*.jar", 1), '\n'))
 
 local extendedClientCapabilities = jdtls.extendedClientCapabilities
 extendedClientCapabilities.resolveAdditionalTextEditsSupport = true
