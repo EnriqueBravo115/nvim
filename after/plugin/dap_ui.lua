@@ -1,8 +1,8 @@
-local dap = require('dap')
+local dap = require("dap")
 
-vim.fn.sign_define('DapBreakpoint', { text = '', texthl = '', linehl = '', numhl = '' })
-vim.fn.sign_define('DapBreakpointRejected', { text = '', texthl = '', linehl = '', numhl = '' })
-vim.fn.sign_define('DapStopped', { text = '▶', texthl = '', linehl = 'DebugBreakpointLine', numhl = '' })
+vim.fn.sign_define("DapBreakpoint", { text = "", texthl = "", linehl = "", numhl = "" })
+vim.fn.sign_define("DapBreakpointRejected", { text = "", texthl = "", linehl = "", numhl = "" })
+vim.fn.sign_define("DapStopped", { text = "▶", texthl = "", linehl = "DebugBreakpointLine", numhl = "" })
 
 require("dapui").setup({
   icons = { expanded = "▾", collapsed = "▸" },
@@ -17,19 +17,19 @@ require("dapui").setup({
   layouts = {
     {
       elements = {
-        'repl',
-        'stacks',
-        'watches',
+        "repl",
+        "stacks",
+        "watches",
       },
       size = 40,
-      position = 'left',
+      position = "left",
     },
     {
       elements = {
-        'scopes',
+        "scopes",
       },
       size = 10,
-      position = 'bottom',
+      position = "bottom",
     },
   },
   floating = {

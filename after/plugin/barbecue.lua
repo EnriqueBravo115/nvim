@@ -6,11 +6,11 @@ require("barbecue").setup({
     separator = "▸",
   },
   kinds = {
-    Constructor = '󱥊',
-    Method = '󰊕',
-    Function = '󰊕',
-    Key = ' ',
-    String = ' '
+    Constructor = "󱥊",
+    Method = "󰊕",
+    Function = "󰊕",
+    Key = " ",
+    String = " "
   },
   theme = {
     basename = { bold = false },

@@ -1,8 +1,3 @@
-vim.cmd("set linebreak")
-vim.cmd("set nocompatible")
-vim.cmd("filetype plugin on")
-vim.cmd("syntax on")
-
 vim.cmd("autocmd FileType vimwiki set norelativenumber")
 vim.cmd("autocmd FileType vimwiki set nonumber")
 
