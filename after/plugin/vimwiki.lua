@@ -8,7 +8,7 @@ vim.cmd("autocmd FileType vimwiki set nonumber")
 
 vim.cmd("hi VimwikiBold term=bold ctermfg=Cyan guifg=#FF7EB6 gui=bold")
 vim.cmd("hi VimwikiItalic term=italic ctermfg=Cyan guifg=#BE95FF gui=italic")
-vim.cmd("hi VimwikiCode term=italic ctermfg=Red guifg=#ffa14f ")
+vim.cmd("hi VimwikiCode term=italic ctermfg=Red guifg=#FF7EB6")
 vim.cmd("hi VimwikiLink term=italic ctermfg=Red guifg=#dabaff")
 
 vim.cmd("hi VimwikiHeader1 guifg=#afff00 gui=bold")

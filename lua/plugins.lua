@@ -11,6 +11,7 @@ return require('packer').startup(function(use)
   use 'jiangmiao/auto-pairs'
   use 'HiPhish/rainbow-delimiters.nvim'
   use "lukas-reineke/indent-blankline.nvim"
+  use { 'stevearc/dressing.nvim' }
 
   use {
     'nvim-lualine/lualine.nvim',
@@ -42,6 +43,7 @@ return require('packer').startup(function(use)
       'tpope/vim-dotenv',
       'kristijanhusak/vim-dadbod-completion' } }
 
+  use 'nvim-lua/plenary.nvim'
   use { 'nvim-telescope/telescope.nvim', tag = '0.1.4', requires = { { 'nvim-lua/plenary.nvim' } } }
   use 'nvim-telescope/telescope-dap.nvim'
 
@@ -49,11 +51,6 @@ return require('packer').startup(function(use)
   use 'jose-elias-alvarez/null-ls.nvim'
 
   use 'theHamsta/nvim-dap-virtual-text'
-
-  use({
-    "iamcco/markdown-preview.nvim",
-    run = function() vim.fn["mkdp#util#install"]() end,
-  })
 
   -- LANG
   use 'mfussenegger/nvim-jdtls'

@@ -34,6 +34,6 @@ vim.opt.colorcolumn = "80"
 
 vim.cmd("highlight ColorColumn guibg=#333333")
 
-vim.cmd("hi EndOfBuffer guibg=#0f0a01 guifg=#0f0a01")
+vim.cmd("hi EndOfBuffer guibg=#282a2e guifg=#282a2e")
 
 vim.cmd("let g:powerline_loaded = 1")

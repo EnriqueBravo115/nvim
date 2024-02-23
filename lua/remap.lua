@@ -2,9 +2,6 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = ","
 local map = vim.keymap.set
 
-vim.keymap.set("n", "n", "nzzzv")
-vim.keymap.set("n", "N", "Nzzzv")
-
 -- TELESCOPE
 vim.keymap.set("n", "<leader>lc", "<cmd>:lua require'telescope'.extensions.dap.commands{}<CR>")
 vim.keymap.set("n", "<leader>lb", "<cmd>:lua require'telescope'.extensions.dap.list_breakpoints{}<CR>")
@@ -15,9 +12,9 @@ vim.keymap.set("n", "<leader><leader>dq", ":tabclose<cr>", {})
 
 -- COMMANDS
 vim.keymap.set("n", "<leader>e", "<cmd>:NvimTreeToggle<CR>")
-vim.keymap.set("n", "<leader>m", "<cmd>:MarkdownPreview<CR>")
 vim.keymap.set("n", "<leader>u", ":UndotreeToggle<CR>")
 vim.keymap.set("v", "<leader>y", '"+y<CR>')
+vim.keymap.set("n", "<leader>c", "<cmd>lua require('swenv.api').pick_venv()<cr>")
 
 -- DAP
 map("n", "<leader>as", vim.diagnostic.setloclist)

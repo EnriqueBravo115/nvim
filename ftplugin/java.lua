@@ -37,12 +37,12 @@ local config = {
       --            saveActions = {
       --                organizeImports = true,
       --            },
-      format = {
-        settings = {
-          url = home .. ".config/nvim/lang-servers/eclipse-java-google-style.xml",
-          profile = "GoogleStyle",
-        },
-      },
+      --      format = {
+      --        settings = {
+      --          url = home .. ".config/nvim/lang-servers/eclipse-java-google-style.xml",
+      --          profile = "GoogleStyle",
+      --        },
+      --      },
       configuration = {
         runtimes = {
           {
@@ -124,8 +124,8 @@ local config = {
     "-javaagent:" .. home .. "/Applications/lombok.jar",
     '-jar',
     vim.fn.glob(
-      "/home/nullboy/Applications/jdt30/plugins/org.eclipse.equinox.launcher_*.jar"),
-    "-configuration", "/home/nullboy/Applications/jdt30/config_linux/",
+      "/home/nullboy/Applications/jdt33/plugins/org.eclipse.equinox.launcher_*.jar"),
+    "-configuration", "/home/nullboy/Applications/jdt33/config_linux/",
     '-data', workspace_folder,
   },
   init_options = {

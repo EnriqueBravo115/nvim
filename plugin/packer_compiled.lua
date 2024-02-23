@@ -111,6 +111,11 @@ _G.packer_plugins = {
     path = "/home/nullboy/.local/share/nvim/site/pack/packer/start/cmp-vsnip",
     url = "https://github.com/hrsh7th/cmp-vsnip"
   },
+  ["dressing.nvim"] = {
+    loaded = true,
+    path = "/home/nullboy/.local/share/nvim/site/pack/packer/start/dressing.nvim",
+    url = "https://github.com/stevearc/dressing.nvim"
+  },
   ["gitsigns.nvim"] = {
     loaded = true,
     path = "/home/nullboy/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
@@ -140,11 +145,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/nullboy/.local/share/nvim/site/pack/packer/start/lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
-  },
-  ["markdown-preview.nvim"] = {
-    loaded = true,
-    path = "/home/nullboy/.local/share/nvim/site/pack/packer/start/markdown-preview.nvim",
-    url = "https://github.com/iamcco/markdown-preview.nvim"
   },
   ["mason-lspconfig.nvim"] = {
     loaded = true,

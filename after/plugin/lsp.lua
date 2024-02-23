@@ -3,8 +3,12 @@ local lsp = require("lsp-zero")
 local capabilities = require('cmp_nvim_lsp')
     .default_capabilities(vim.lsp.protocol.make_client_capabilities())
 
-vim.api.nvim_set_hl(0, "CmpNormal", { bg = "#0f0a01" })
-vim.api.nvim_set_hl(0, "NormalFloat", { bg = "#0f0a01" })
+vim.api.nvim_set_hl(0, "CmpNormal", { bg = "#282a2e" })
+vim.api.nvim_set_hl(0, "NormalFloat", { bg = "#282a2e" })
+vim.api.nvim_set_hl(0, "CmpItemKindFunction", { fg = "#acf2e4" })
+vim.api.nvim_set_hl(0, "CmpItemKindMethod", { fg = "#acf2e4" })
+vim.api.nvim_set_hl(0, "CmpItemKindClass", { fg = "#ffa14f" })
+vim.api.nvim_set_hl(0, "CmpItemKindValue", { fg = "#ff8170" })
 
 lsp.preset("recommended")
 
@@ -53,11 +57,12 @@ require 'lspconfig'.omnisharp.setup {
   filetypes = { "cs", "vb" },
   enable_editorconfig_support = true,
   enable_ms_build_load_projects_on_demand = false,
-  enable_roslyn_analyzers = false,
+  enable_roslyn_analyzers = true,
   organize_imports_on_format = false,
   enable_import_completion = true,
   sdk_include_prereleases = false,
   analyze_open_documents_only = false,
+  showCompletionItemsFromUnimportedNamespaces = true
 }
 
 lsp.on_attach(function(client, bufnr)
@@ -82,7 +87,7 @@ cmp.setup({
     fields = { 'abbr', 'kind', 'menu' },
     format = require('lspkind').cmp_format({
       mode = 'symbol',
-      maxwidth = 30,
+      maxwidth = 40,
       ellipsis_char = '...',
       symbol_map = {
         Value = "󰌋",
@@ -101,11 +106,3 @@ vim.diagnostic.config({
 })
 
 vim.cmd [[autocmd BufWritePre * lua vim.lsp.buf.format()]]
-
-vim.api.nvim_exec(
-  [[
-      autocmd FileType sql setlocal omnifunc=vim_dadbod_completion#omni
-      autocmd FileType sql,mysql,plsql lua require('cmp').setup.buffer({ sources = {{ name = 'vim-dadbod-completion' }} })
-  ]],
-  false
-)

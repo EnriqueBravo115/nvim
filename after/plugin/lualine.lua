@@ -41,18 +41,15 @@ require('lualine').setup {
     }
   },
   sections = {
-    lualine_a = { { 'mode' } },
+    lualine_a = { { 'mode', icons_enabled = true, icon = '' } },
     lualine_b = { { 'branch', icon = '󰘬' },
       { 'diff', symbols = { added = '󰋠 ', modified = '󱗜 ', removed = '󰍵 ' } }
     },
-    lualine_c = { { 'filename' } },
+    lualine_c = { { 'filename' }
+    , { 'swenv', icon = '󰢔' }
+    },
     lualine_x = {
-      {
-        'fileformat',
-        symbols = {
-          unix = '', -- e712
-        }
-      }
+      'diagnostics'
     },
     lualine_y = {
     },
