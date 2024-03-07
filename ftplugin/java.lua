@@ -12,12 +12,12 @@ local workspace_folder = home .. "/.cache/jdtls/workspace" .. vim.fn.fnamemodify
 local bundles = {
   vim.fn.glob(
     home ..
-    "/.local/share/nvim/mason/packages/java-debug-adapter/extension/server/com.microsoft.java.debug.plugin-0.47.0.jar",
+    "/Applications/java-debug/com.microsoft.java.debug.plugin/target/com.microsoft.java.debug.plugin-0.51.1.jar",
     "\n")
 }
 
 vim.list_extend(bundles,
-  vim.split(vim.fn.glob(home .. "~/.local/share/nvim/mason/share/java-test/*.jar", 1), "\n"))
+  vim.split(vim.fn.glob(home .. "/Applications/vscode-java-test/server/*.jar", 1), "\n"))
 
 local extendedClientCapabilities = jdtls.extendedClientCapabilities
 extendedClientCapabilities.resolveAdditionalTextEditsSupport = true
@@ -34,15 +34,6 @@ local config = {
     init_options = {
     },
     java = {
-      --      saveActions = {
-      --          organizeImports = true,
-      --      },
-      --      format = {
-      --        settings = {
-      --          url = home .. ".config/nvim/lang-servers/eclipse-java-google-style.xml",
-      --          profile = "GoogleStyle",
-      --        },
-      --      },
       configuration = {
         runtimes = {
           {
@@ -110,6 +101,7 @@ local config = {
       extendedClientCapabilities = extendedClientCapabilities
     },
   },
+
   cmd = {
     "java",
     "-Declipse.application=org.eclipse.jdt.ls.core.id1",

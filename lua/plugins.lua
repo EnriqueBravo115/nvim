@@ -7,9 +7,7 @@ return require("packer").startup(function(use)
   use "nvim-tree/nvim-web-devicons"
   use "lewis6991/gitsigns.nvim"
   use "norcalli/nvim-colorizer.lua"
-  use "rose-pine/neovim"
   use "jiangmiao/auto-pairs"
-  use "HiPhish/rainbow-delimiters.nvim"
   use "lukas-reineke/indent-blankline.nvim"
   use { "stevearc/dressing.nvim" }
 
@@ -50,29 +48,28 @@ return require("packer").startup(function(use)
   use { "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } }
   use "jose-elias-alvarez/null-ls.nvim"
 
-  use "theHamsta/nvim-dap-virtual-text"
-
   -- LANG
   use "mfussenegger/nvim-jdtls"
   use "leoluz/nvim-dap-go"
+  use({ 'scalameta/nvim-metals', requires = { 'nvim-lua/plenary.nvim' } })
+  use "bluz71/vim-nightfly-colors"
 
   use {
     "VonHeikemen/lsp-zero.nvim",
     branch = "v2.x",
     requires = {
-      { "neovim/nvim-lspconfig" }, -- Required
+      { "neovim/nvim-lspconfig" },
       {
         "williamboman/mason.nvim",
         run = function()
           pcall(vim.cmd, "MasonUpdate")
         end,
       },
-      { "williamboman/mason-lspconfig.nvim" }, -- Optional
+      { "williamboman/mason-lspconfig.nvim" },
 
-      -- Autocompletion
-      { "hrsh7th/nvim-cmp" },     -- Required
-      { "hrsh7th/cmp-nvim-lsp" }, -- Required
-      { "L3MON4D3/LuaSnip" },     -- Required
+      { "hrsh7th/nvim-cmp" },
+      { "hrsh7th/cmp-nvim-lsp" },
+      { "L3MON4D3/LuaSnip" },
       { "onsails/lspkind.nvim" },
       { "hrsh7th/cmp-path" },
       { "hrsh7th/cmp-buffer" },

@@ -1,7 +1,7 @@
 local Colors = {
   violet       = "#c4a7e7",
   black        = "#000000",
-  brightorange = "#ff8700",
+  brightorange = "#ff8800",
   gray1        = "#262626",
   gray5        = "#2c2c2c",
   gray7        = "#9e9e9e",
@@ -32,7 +32,7 @@ require("lualine").setup {
   options = {
     theme = powerline,
     component_separators = "",
-    section_separators = { left = "", right = "" },
+    section_separators = { left = "", right = "" },
     always_divide_middle = false,
     refresh = {
       statusline = 1000,
@@ -41,7 +41,7 @@ require("lualine").setup {
     }
   },
   sections = {
-    lualine_a = { { "mode", icons_enabled = true, icon = "" } },
+    lualine_a = { { "mode", icons_enabled = true, icon = "" } },
     lualine_b = { { "branch", icon = "󰘬" },
       { "diff", symbols = { added = "󰋠 ", modified = "󱗜 ", removed = "󰍵 " } }
     },

@@ -24,7 +24,7 @@ cmp.setup({
       maxwidth = 40,
       ellipsis_char = "...",
       symbol_map = {
-        Value = "󰌋",
+        Value = "",
         Interface = "",
         Method = "󰊕",
         Class = "",
@@ -68,8 +68,8 @@ cmp.setup({
   },
 })
 
-vim.api.nvim_set_hl(0, "CmpNormal", { bg = "#282a2e" })
-vim.api.nvim_set_hl(0, "NormalFloat", { bg = "#282a2e" })
+vim.api.nvim_set_hl(0, "CmpNormal", { bg = "#011627" })
+vim.api.nvim_set_hl(0, "NormalFloat", { bg = "#011627" })
 
 vim.api.nvim_set_hl(0, "CmpItemKindFunction", { fg = "#acf2e4" })
 vim.api.nvim_set_hl(0, "CmpItemKindMethod", { fg = "#acf2e4" })
@@ -77,7 +77,7 @@ vim.api.nvim_set_hl(0, "CmpItemKindClass", { fg = "#ffa14f" })
 vim.api.nvim_set_hl(0, "CmpItemKindValue", { fg = "#ff8170" })
 
 vim.diagnostic.config({
-  virtual_text = false
+  virtual_text = true
 })
 
 vim.cmd [[autocmd BufWritePre * lua vim.lsp.buf.format()]]
