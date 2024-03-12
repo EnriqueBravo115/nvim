@@ -1,5 +1,5 @@
 require("ibl").setup {
-  indent = { char = "¦" },
+  indent = { char = "│" },
   whitespace = {
     remove_blankline_trail = true,
   },
@@ -8,5 +8,5 @@ require("ibl").setup {
     filetypes = {
       "vimwiki",
     }
-  },
+  }
 }

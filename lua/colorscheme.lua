@@ -1,2 +1,3 @@
 vim.g.nightflyTransparent = true
-vim.cmd('colorscheme nightfly')
+vim.g.moonflyTransparent = true
+vim.cmd('colorscheme moonfly')

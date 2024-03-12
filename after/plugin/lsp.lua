@@ -68,8 +68,8 @@ cmp.setup({
   },
 })
 
-vim.api.nvim_set_hl(0, "CmpNormal", { bg = "#011627" })
-vim.api.nvim_set_hl(0, "NormalFloat", { bg = "#011627" })
+vim.api.nvim_set_hl(0, "CmpNormal", { bg = "#222222" })
+vim.api.nvim_set_hl(0, "NormalFloat", { bg = "#222222" })
 
 vim.api.nvim_set_hl(0, "CmpItemKindFunction", { fg = "#acf2e4" })
 vim.api.nvim_set_hl(0, "CmpItemKindMethod", { fg = "#acf2e4" })

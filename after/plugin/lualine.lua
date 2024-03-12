@@ -1,5 +1,5 @@
 local Colors = {
-  violet       = "#c4a7e7",
+  violet       = "#afdf00",
   black        = "#000000",
   brightorange = "#ff8800",
   gray1        = "#262626",
@@ -7,8 +7,8 @@ local Colors = {
   gray7        = "#9e9e9e",
   gray10       = "#f0f0f0",
   t            = "#00FFFFFF",
-  green        = "#06D6A0",
-  pine         = "#fb4934",
+  green        = "#9147D6",
+  pine         = "#DA2D52",
   foam         = "#9ccfd8",
 }
 
@@ -41,7 +41,7 @@ require("lualine").setup {
     }
   },
   sections = {
-    lualine_a = { { "mode", icons_enabled = true, icon = "" } },
+    lualine_a = { { "mode", icons_enabled = false } },
     lualine_b = { { "branch", icon = "󰘬" },
       { "diff", symbols = { added = "󰋠 ", modified = "󱗜 ", removed = "󰍵 " } }
     },
