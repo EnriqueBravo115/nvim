@@ -52,7 +52,6 @@ return require("packer").startup(function(use)
   use "mfussenegger/nvim-jdtls"
   use "leoluz/nvim-dap-go"
   use({ 'scalameta/nvim-metals', requires = { 'nvim-lua/plenary.nvim' } })
-  use "bluz71/vim-nightfly-colors"
   use "bluz71/vim-moonfly-colors"
 
   use {
@@ -76,6 +75,9 @@ return require("packer").startup(function(use)
       { "hrsh7th/cmp-buffer" },
       { "hrsh7th/cmp-vsnip" },
       { "hrsh7th/vim-vsnip" },
+      { 'saadparwaiz1/cmp_luasnip' },
+      { 'hrsh7th/cmp-nvim-lua' },
+      { 'rafamadriz/friendly-snippets' },
     }
   }
 end)

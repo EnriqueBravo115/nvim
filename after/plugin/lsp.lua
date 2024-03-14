@@ -68,8 +68,16 @@ cmp.setup({
   },
 })
 
-vim.api.nvim_set_hl(0, "CmpNormal", { bg = "#222222" })
-vim.api.nvim_set_hl(0, "NormalFloat", { bg = "#222222" })
+require 'lspconfig'.kotlin_language_server.setup {}
+require 'lspconfig'.groovyls.setup {
+  cmd = { "java", "-jar", "/home/nullboy/.local/share/nvim/mason/packages/groovy-language-server/build/libs/groovy-language-server-all.jar" },
+  filetypes = {
+    "groovy"
+  }
+}
+
+vim.api.nvim_set_hl(0, "CmpNormal", { bg = "#2b2b2f" })
+vim.api.nvim_set_hl(0, "NormalFloat", { bg = "#2b2b2f" })
 
 vim.api.nvim_set_hl(0, "CmpItemKindFunction", { fg = "#acf2e4" })
 vim.api.nvim_set_hl(0, "CmpItemKindMethod", { fg = "#acf2e4" })
