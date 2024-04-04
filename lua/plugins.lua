@@ -10,6 +10,7 @@ return require("packer").startup(function(use)
   use "jiangmiao/auto-pairs"
   use "lukas-reineke/indent-blankline.nvim"
   use { "stevearc/dressing.nvim" }
+  use 'HiPhish/rainbow-delimiters.nvim'
 
   use {
     "nvim-lualine/lualine.nvim",
@@ -45,7 +46,8 @@ return require("packer").startup(function(use)
   use { "nvim-telescope/telescope.nvim", tag = "0.1.4", requires = { { "nvim-lua/plenary.nvim" } } }
   use "nvim-telescope/telescope-dap.nvim"
 
-  use { "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } }
+  use { "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap", "nvim-neotest/nvim-nio" } }
+  use "folke/neodev.nvim"
   use "jose-elias-alvarez/null-ls.nvim"
 
   -- LANG
