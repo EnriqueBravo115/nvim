@@ -1,7 +1,6 @@
 require("barbecue").setup({
   show_dirname = false,
   show_basename = true,
-  exclude_filetypes = { "vimwiki" },
   symbols = {
     separator = "▸",
   },

@@ -59,12 +59,12 @@ cmp.setup({
 
   window = {
     completion = {
-      border = "rounded",
+      --border = "double",
       scrollbar = false,
       winhighlight = "Normal:CmpNormal",
     },
     documentation = {
-      border = "rounded",
+      border = "",
       col_offset = 0,
       scrollbar = "",
       winhighlight = "Normal:CmpNormal",
@@ -75,11 +75,9 @@ cmp.setup({
 require 'lspconfig'.kotlin_language_server.setup {}
 require 'lspconfig'.templ.setup {}
 
-vim.api.nvim_set_hl(0, "CmpNormal", { bg = "#2b2b2f" })
-vim.api.nvim_set_hl(0, "NormalFloat", { bg = "#2b2b2f" })
+--vim.api.nvim_set_hl(0, "CmpNormal", { bg = "#282c34" })
+--vim.api.nvim_set_hl(0, "NormalFloat", { bg = "#282c34" })
 
-vim.api.nvim_set_hl(0, "CmpItemKindFunction", { fg = "#acf2e4" })
-vim.api.nvim_set_hl(0, "CmpItemKindMethod", { fg = "#acf2e4" })
 vim.api.nvim_set_hl(0, "CmpItemKindClass", { fg = "#ffa14f" })
 vim.api.nvim_set_hl(0, "CmpItemKindValue", { fg = "#ff8170" })
 

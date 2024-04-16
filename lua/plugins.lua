@@ -11,6 +11,7 @@ return require("packer").startup(function(use)
   use "lukas-reineke/indent-blankline.nvim"
   use { "stevearc/dressing.nvim" }
   use 'HiPhish/rainbow-delimiters.nvim'
+  use "navarasu/onedark.nvim"
 
   use {
     "nvim-lualine/lualine.nvim",
@@ -18,7 +19,7 @@ return require("packer").startup(function(use)
   }
 
   use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
-  use "nvim-treesitter/nvim-treesitter-context"
+  --use "nvim-treesitter/nvim-treesitter-context"
   use "windwp/nvim-ts-autotag"
 
   use({
@@ -54,7 +55,6 @@ return require("packer").startup(function(use)
   use "mfussenegger/nvim-jdtls"
   use "leoluz/nvim-dap-go"
   use({ 'scalameta/nvim-metals', requires = { 'nvim-lua/plenary.nvim' } })
-  use "bluz71/vim-moonfly-colors"
 
   use {
     "VonHeikemen/lsp-zero.nvim",

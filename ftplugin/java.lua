@@ -43,7 +43,12 @@ local config = {
           {
             name = "JavaSE-1.8",
             path = "/home/nullboy/.sdkman/candidates/java/8.0.392-tem"
-          }
+          },
+          {
+            name = "JavaSE-17",
+            path = "/home/nullboy/.sdkman/candidates/java/17.0.10-tem/"
+          },
+
         },
         updateBuildConfiguration = "interactive",
       },

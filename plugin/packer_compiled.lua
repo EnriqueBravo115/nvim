@@ -49,8 +49,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/home/nullboy/.cache/nvim/packer_hererocks/2.1.1692716794/share/lua/5.1/?.lua;/home/nullboy/.cache/nvim/packer_hererocks/2.1.1692716794/share/lua/5.1/?/init.lua;/home/nullboy/.cache/nvim/packer_hererocks/2.1.1692716794/lib/luarocks/rocks-5.1/?.lua;/home/nullboy/.cache/nvim/packer_hererocks/2.1.1692716794/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/home/nullboy/.cache/nvim/packer_hererocks/2.1.1692716794/lib/lua/5.1/?.so"
+local package_path_str = "/home/nullboy/.cache/nvim/packer_hererocks/2.1.1707061634/share/lua/5.1/?.lua;/home/nullboy/.cache/nvim/packer_hererocks/2.1.1707061634/share/lua/5.1/?/init.lua;/home/nullboy/.cache/nvim/packer_hererocks/2.1.1707061634/lib/luarocks/rocks-5.1/?.lua;/home/nullboy/.cache/nvim/packer_hererocks/2.1.1707061634/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/home/nullboy/.cache/nvim/packer_hererocks/2.1.1707061634/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -241,11 +241,6 @@ _G.packer_plugins = {
     path = "/home/nullboy/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
   },
-  ["nvim-treesitter-context"] = {
-    loaded = true,
-    path = "/home/nullboy/.local/share/nvim/site/pack/packer/start/nvim-treesitter-context",
-    url = "https://github.com/nvim-treesitter/nvim-treesitter-context"
-  },
   ["nvim-ts-autotag"] = {
     loaded = true,
     path = "/home/nullboy/.local/share/nvim/site/pack/packer/start/nvim-ts-autotag",
@@ -255,6 +250,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/nullboy/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
     url = "https://github.com/nvim-tree/nvim-web-devicons"
+  },
+  ["onedark.nvim"] = {
+    loaded = true,
+    path = "/home/nullboy/.local/share/nvim/site/pack/packer/start/onedark.nvim",
+    url = "https://github.com/navarasu/onedark.nvim"
   },
   ["packer.nvim"] = {
     loaded = true,
@@ -315,11 +315,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/nullboy/.local/share/nvim/site/pack/packer/start/vim-fugitive",
     url = "https://github.com/tpope/vim-fugitive"
-  },
-  ["vim-moonfly-colors"] = {
-    loaded = true,
-    path = "/home/nullboy/.local/share/nvim/site/pack/packer/start/vim-moonfly-colors",
-    url = "https://github.com/bluz71/vim-moonfly-colors"
   },
   ["vim-vsnip"] = {
     loaded = true,
