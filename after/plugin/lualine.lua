@@ -1,6 +1,6 @@
 require("lualine").setup {
   options = {
-    theme = "auto",
+    theme = "solarized_dark",
     component_separators = "",
     section_separators = { left = "", right = "" },
     always_divide_middle = false,
@@ -13,14 +13,14 @@ require("lualine").setup {
   sections = {
     lualine_a = { { "mode", icons_enabled = true, icon = "" } },
     lualine_b = { { "branch", icon = "󰘬" },
-      { "diff", symbols = { added = "󰋠 ", modified = "󱗜 ", removed = "󰍵 " } }
+
     },
-    lualine_c = { { "filename" } },
+    lualine_c = { { "filename" }, { "diff", symbols = { added = "󰋠 ", modified = "󱗜 ", removed = "󰍵 " } } },
     lualine_x = {
       "diagnostics"
     },
     lualine_y = {
-      { "fileformat", symbols = { unix = " " } }
+      { "fileformat", symbols = { dos = " ", unix = " " } }
     },
     lualine_z = {
       { "location" }
