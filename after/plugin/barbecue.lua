@@ -13,7 +13,7 @@ require("barbecue").setup({
   },
   theme = {
     basename = { bold = false },
-    separator = { fg = "#FEA82F" },
+    separator = { fg = "#fd9353" },
     context_class = { fg = "#E76D83" }
   }
 })

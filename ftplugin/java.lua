@@ -48,7 +48,6 @@ local config = {
             name = "JavaSE-17",
             path = "/home/nullboy/.sdkman/candidates/java/17.0.10-tem/"
           },
-
         },
         updateBuildConfiguration = "interactive",
       },
@@ -65,7 +64,7 @@ local config = {
       },
       inlayHints = {
         parameterNames = {
-          enabled = "all", -- literals, all, none
+          enabled = "all",           -- literals, all, none
         },
       },
       completion = {
@@ -121,8 +120,8 @@ local config = {
     "-javaagent:" .. home .. "/Applications/lombok.jar",
     "-jar",
     vim.fn.glob(
-      "/home/nullboy/Applications/jdt33/plugins/org.eclipse.equinox.launcher_*.jar"),
-    "-configuration", "/home/nullboy/Applications/jdt33/config_linux/",
+      "/home/nullboy/Applications/jdt35/plugins/org.eclipse.equinox.launcher_*.jar"),
+    "-configuration", "/home/nullboy/Applications/jdt35/config_linux/",
     "-data", workspace_folder,
   },
   init_options = {

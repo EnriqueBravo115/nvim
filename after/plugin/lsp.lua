@@ -75,14 +75,14 @@ cmp.setup({
 require 'lspconfig'.kotlin_language_server.setup {}
 require 'lspconfig'.templ.setup {}
 
---vim.api.nvim_set_hl(0, "CmpNormal", { bg = "#282c34" })
---vim.api.nvim_set_hl(0, "NormalFloat", { bg = "#282c34" })
-
 vim.api.nvim_set_hl(0, "CmpItemKindClass", { fg = "#ffa14f" })
 vim.api.nvim_set_hl(0, "CmpItemKindValue", { fg = "#ff8170" })
+vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+
 
 vim.diagnostic.config({
-  virtual_text = true
+  virtual_text = false
 })
 
---vim.cmd [[autocmd BufWritePre * lua vim.lsp.buf.format()]]
+vim.cmd [[autocmd BufWritePre * lua vim.lsp.buf.format()]]

@@ -126,6 +126,11 @@ _G.packer_plugins = {
     path = "/home/nullboy/.local/share/nvim/site/pack/packer/start/dressing.nvim",
     url = "https://github.com/stevearc/dressing.nvim"
   },
+  ["everforest-nvim"] = {
+    loaded = true,
+    path = "/home/nullboy/.local/share/nvim/site/pack/packer/start/everforest-nvim",
+    url = "https://github.com/neanias/everforest-nvim"
+  },
   ["friendly-snippets"] = {
     loaded = true,
     path = "/home/nullboy/.local/share/nvim/site/pack/packer/start/friendly-snippets",
@@ -175,11 +180,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/nullboy/.local/share/nvim/site/pack/packer/start/neodev.nvim",
     url = "https://github.com/folke/neodev.nvim"
-  },
-  neovim = {
-    loaded = true,
-    path = "/home/nullboy/.local/share/nvim/site/pack/packer/start/neovim",
-    url = "https://github.com/rose-pine/neovim"
   },
   ["null-ls.nvim"] = {
     loaded = true,
@@ -266,6 +266,11 @@ _G.packer_plugins = {
     path = "/home/nullboy/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
+  ["rainbow-delimiters.nvim"] = {
+    loaded = true,
+    path = "/home/nullboy/.local/share/nvim/site/pack/packer/start/rainbow-delimiters.nvim",
+    url = "https://github.com/HiPhish/rainbow-delimiters.nvim"
+  },
   ["solarized-osaka.nvim"] = {
     loaded = true,
     path = "/home/nullboy/.local/share/nvim/site/pack/packer/start/solarized-osaka.nvim",
@@ -280,6 +285,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/nullboy/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
+  },
+  ["templ.vim"] = {
+    loaded = true,
+    path = "/home/nullboy/.local/share/nvim/site/pack/packer/start/templ.vim",
+    url = "https://github.com/joerdav/templ.vim"
   },
   ["toggleterm.nvim"] = {
     loaded = true,
@@ -315,6 +325,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/nullboy/.local/share/nvim/site/pack/packer/start/vim-fugitive",
     url = "https://github.com/tpope/vim-fugitive"
+  },
+  ["vim-moonfly-colors"] = {
+    loaded = true,
+    path = "/home/nullboy/.local/share/nvim/site/pack/packer/start/vim-moonfly-colors",
+    url = "https://github.com/bluz71/vim-moonfly-colors"
   },
   ["vim-vsnip"] = {
     loaded = true,

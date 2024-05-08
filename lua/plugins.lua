@@ -10,9 +10,11 @@ return require("packer").startup(function(use)
   use "jiangmiao/auto-pairs"
   use "lukas-reineke/indent-blankline.nvim"
   use { "stevearc/dressing.nvim" }
-  --use "HiPhish/rainbow-delimiters.nvim"
-  use "rose-pine/neovim"
+  use "HiPhish/rainbow-delimiters.nvim"
   use "craftzdog/solarized-osaka.nvim"
+  use "joerdav/templ.vim"
+  use "neanias/everforest-nvim"
+  use "bluz71/vim-moonfly-colors"
 
   use {
     "nvim-lualine/lualine.nvim",
