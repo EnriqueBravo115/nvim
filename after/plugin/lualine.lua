@@ -3,11 +3,11 @@ local Colors = {
   black        = "#000000",
   brightorange = "#ff8800",
   gray1        = "#262626",
-  gray5        = "#2c2c2c",
+  gray5        = "#323437",
   gray7        = "#9e9e9e",
   gray10       = "#f0f0f0",
   t            = "#00FFFFFF",
-  green        = "#06D6A0",
+  green        = "#84d82f",
   pine         = "#fb4934",
   foam         = "#9ccfd8",
 }
