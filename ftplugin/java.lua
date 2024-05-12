@@ -12,7 +12,7 @@ local workspace_folder = home .. "/.cache/jdtls/workspace" .. vim.fn.fnamemodify
 local bundles = {
   vim.fn.glob(
     home ..
-    "/Applications/java-debug/com.microsoft.java.debug.plugin/target/com.microsoft.java.debug.plugin-0.51.1.jar",
+    "/Applications/java-debug/com.microsoft.java.debug.plugin/target/com.microsoft.java.debug.plugin-0.52.0.jar",
     "\n")
 }
 
@@ -38,15 +38,15 @@ local config = {
         runtimes = {
           {
             name = "JavaSE-11",
-            path = "/home/nullboy/.sdkman/candidates/java/11.0.21-tem"
+            path = "/home/nullboy/.sdkman/candidates/java/11.0.23-tem"
           },
           {
             name = "JavaSE-1.8",
-            path = "/home/nullboy/.sdkman/candidates/java/8.0.392-tem"
+            path = "/home/nullboy/.sdkman/candidates/java/8.0.412-tem"
           },
           {
             name = "JavaSE-17",
-            path = "/home/nullboy/.sdkman/candidates/java/17.0.10-tem/"
+            path = "/home/nullboy/.sdkman/candidates/java/17.0.11-tem"
           },
         },
         updateBuildConfiguration = "interactive",
@@ -64,7 +64,7 @@ local config = {
       },
       inlayHints = {
         parameterNames = {
-          enabled = "all",           -- literals, all, none
+          enabled = "all", -- literals, all, none
         },
       },
       completion = {
