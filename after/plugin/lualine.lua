@@ -1,5 +1,5 @@
 local Colors = {
-  violet       = "#CC3980",
+  violet       = "#cf87e8	",
   black        = "#000000",
   brightorange = "#ff8800",
   gray1        = "#262626",
@@ -7,7 +7,7 @@ local Colors = {
   gray7        = "#9e9e9e",
   gray10       = "#f0f0f0",
   t            = "#00FFFFFF",
-  green        = "#7F3FBF",
+  green        = "#afdf00",
   pine         = "#fb4934",
   foam         = "#9ccfd8",
 }
@@ -51,7 +51,7 @@ require("lualine").setup {
       { "filetype", icon_only = true }
     },
     lualine_y = {
-      { "fileformat", symbols = { dos = " ", unix = " " } }
+      { "fileformat", symbols = { dos = " ", unix = "󰣇 " } }
     },
     lualine_z = {
       { "location" }

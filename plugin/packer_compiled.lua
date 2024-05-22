@@ -126,11 +126,6 @@ _G.packer_plugins = {
     path = "/home/nullboy/.local/share/nvim/site/pack/packer/start/dressing.nvim",
     url = "https://github.com/stevearc/dressing.nvim"
   },
-  ["everforest-nvim"] = {
-    loaded = true,
-    path = "/home/nullboy/.local/share/nvim/site/pack/packer/start/everforest-nvim",
-    url = "https://github.com/neanias/everforest-nvim"
-  },
   ["friendly-snippets"] = {
     loaded = true,
     path = "/home/nullboy/.local/share/nvim/site/pack/packer/start/friendly-snippets",
@@ -221,11 +216,6 @@ _G.packer_plugins = {
     path = "/home/nullboy/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
   },
-  ["nvim-metals"] = {
-    loaded = true,
-    path = "/home/nullboy/.local/share/nvim/site/pack/packer/start/nvim-metals",
-    url = "https://github.com/scalameta/nvim-metals"
-  },
   ["nvim-navic"] = {
     loaded = true,
     path = "/home/nullboy/.local/share/nvim/site/pack/packer/start/nvim-navic",
@@ -270,11 +260,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/nullboy/.local/share/nvim/site/pack/packer/start/rainbow-delimiters.nvim",
     url = "https://github.com/HiPhish/rainbow-delimiters.nvim"
-  },
-  ["solarized-osaka.nvim"] = {
-    loaded = true,
-    path = "/home/nullboy/.local/share/nvim/site/pack/packer/start/solarized-osaka.nvim",
-    url = "https://github.com/craftzdog/solarized-osaka.nvim"
   },
   ["telescope-dap.nvim"] = {
     loaded = true,

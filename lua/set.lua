@@ -26,12 +26,12 @@ vim.opt.signcolumn = "yes"
 
 vim.opt.updatetime = 50
 
-vim.opt.conceallevel = 2
-
-vim.cmd("set concealcursor=nc")
+--vim.opt.conceallevel = 2
+--vim.cmd("set concealcursor=nc")
 
 vim.opt.colorcolumn = "80"
 
 vim.cmd("highlight ColorColumn guibg=#393e48")
+vim.cmd("highlight EndOfBuffer guifg=#282a2e")
 
 vim.cmd("let g:powerline_loaded = 1")

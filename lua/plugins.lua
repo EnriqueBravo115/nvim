@@ -11,9 +11,7 @@ return require("packer").startup(function(use)
   use "lukas-reineke/indent-blankline.nvim"
   use { "stevearc/dressing.nvim" }
   use "HiPhish/rainbow-delimiters.nvim"
-  use "craftzdog/solarized-osaka.nvim"
   use "joerdav/templ.vim"
-  use "neanias/everforest-nvim"
   use "bluz71/vim-moonfly-colors"
 
   use {
@@ -57,7 +55,6 @@ return require("packer").startup(function(use)
   -- LANG
   use "mfussenegger/nvim-jdtls"
   use "leoluz/nvim-dap-go"
-  use({ 'scalameta/nvim-metals', requires = { 'nvim-lua/plenary.nvim' } })
 
   use {
     "VonHeikemen/lsp-zero.nvim",

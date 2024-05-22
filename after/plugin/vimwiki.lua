@@ -5,6 +5,7 @@ vim.cmd("hi VimwikiBold term=bold ctermfg=Cyan guifg=#E76D83 gui=bold")
 vim.cmd("hi VimwikiItalic term=italic ctermfg=Cyan guifg=#78c2b3 gui=italic")
 vim.cmd("hi VimwikiCode term=italic ctermfg=Red guifg=#FAB795")
 vim.cmd("hi VimwikiLink term=underline ctermfg=Red guifg=#61afef")
+vim.cmd("hi VimwikiList term=underline ctermfg=Red guifg=#fd9353")
 
 vim.cmd("hi VimwikiHeader1 guifg=#afff00 gui=bold")
 vim.cmd("hi VimwikiHeader2 guifg=#87ffff gui=bold")

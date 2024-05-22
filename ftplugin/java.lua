@@ -120,8 +120,8 @@ local config = {
     "-javaagent:" .. home .. "/Applications/lombok.jar",
     "-jar",
     vim.fn.glob(
-      "/home/nullboy/Applications/jdt35/plugins/org.eclipse.equinox.launcher_*.jar"),
-    "-configuration", "/home/nullboy/Applications/jdt35/config_linux/",
+      "/home/nullboy/Applications/jdtls35/plugins/org.eclipse.equinox.launcher_*.jar"),
+    "-configuration", "/home/nullboy/Applications/jdtls35/config_linux/",
     "-data", workspace_folder,
   },
   init_options = {

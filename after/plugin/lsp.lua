@@ -85,4 +85,4 @@ vim.diagnostic.config({
   virtual_text = false
 })
 
-vim.cmd [[autocmd BufWritePre * lua vim.lsp.buf.format()]]
+--vim.cmd [[autocmd BufWritePre * lua vim.lsp.buf.format()]]
