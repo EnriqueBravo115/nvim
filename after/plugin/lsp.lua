@@ -80,7 +80,6 @@ vim.api.nvim_set_hl(0, "CmpItemKindValue", { fg = "#ff8170" })
 vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
 vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 
-
 vim.diagnostic.config({
   virtual_text = false
 })

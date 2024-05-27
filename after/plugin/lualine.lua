@@ -1,5 +1,5 @@
 local Colors = {
-  violet       = "#cf87e8	",
+  violet       = "#9ccfd8",
   black        = "#000000",
   brightorange = "#ff8800",
   gray1        = "#262626",
@@ -7,7 +7,7 @@ local Colors = {
   gray7        = "#9e9e9e",
   gray10       = "#f0f0f0",
   t            = "#00FFFFFF",
-  green        = "#afdf00",
+  green        = "#ae81ff",
   pine         = "#fb4934",
   foam         = "#9ccfd8",
 }
@@ -32,7 +32,7 @@ require("lualine").setup {
   options = {
     theme = powerline,
     component_separators = "",
-    section_separators = { left = "", right = "" },
+    section_separators = { left = "", right = "" },
     always_divide_middle = false,
     refresh = {
       statusline = 1000,
