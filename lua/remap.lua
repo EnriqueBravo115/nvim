@@ -1,6 +1,8 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = ","
 local map = vim.keymap.set
+local jdtls = require("jdtls")
+local set = vim.keymap.set
 
 -- TELESCOPE
 vim.keymap.set("n", "<leader>lc", "<cmd>:lua require'telescope'.extensions.dap.commands{}<CR>")
@@ -46,3 +48,25 @@ end)
 map("n", "<leader>dr", function()
   require("dap").repl.toggle()
 end)
+
+-- DAP java
+set("n", "<leader>df", function()
+  if vim.bo.modified then
+    vim.cmd("w")
+  end
+  jdtls.test_class()
+end, opts)
+
+set("n", "<leader>dn", function()
+  if vim.bo.modified then
+    vim.cmd("w")
+  end
+  jdtls.test_nearest_method({
+    config_overrides = {
+      stepFilters = {
+        skipClasses = { "$JDK", "junit.*" },
+        skipSynthetics = true
+      }
+    }
+  })
+end, opts)

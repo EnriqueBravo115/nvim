@@ -7,7 +7,6 @@ return require("packer").startup(function(use)
   use "nvim-tree/nvim-web-devicons"
   use "lewis6991/gitsigns.nvim"
   use "norcalli/nvim-colorizer.lua"
-  use "jiangmiao/auto-pairs"
   use "lukas-reineke/indent-blankline.nvim"
   use { "stevearc/dressing.nvim" }
   --use "HiPhish/rainbow-delimiters.nvim"
@@ -15,6 +14,14 @@ return require("packer").startup(function(use)
   use "bluz71/vim-moonfly-colors"
   use { "ellisonleao/gruvbox.nvim" }
   use "rose-pine/neovim"
+  use 'navarasu/onedark.nvim'
+  use {
+    "windwp/nvim-autopairs",
+    event = "InsertEnter",
+    config = function()
+      require("nvim-autopairs").setup {}
+    end
+  }
 
   use {
     "nvim-lualine/lualine.nvim",

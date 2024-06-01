@@ -135,34 +135,4 @@ end
 
 require("dap.ext.vscode").load_launchjs()
 
---vim.api.nvim_create_autocmd({ "BufWritePost" }, {
---    pattern = { "*.java" },
---    callback = function()
---        local _, _ = pcall(vim.lsp.codelens.refresh)
---    end,
---})
-
 jdtls.start_or_attach(config)
-
-local set = vim.keymap.set
-
-set("n", "<leader>df", function()
-  if vim.bo.modified then
-    vim.cmd("w")
-  end
-  jdtls.test_class()
-end, opts)
-
-set("n", "<leader>dn", function()
-  if vim.bo.modified then
-    vim.cmd("w")
-  end
-  jdtls.test_nearest_method({
-    config_overrides = {
-      stepFilters = {
-        skipClasses = { "$JDK", "junit.*" },
-        skipSynthetics = true
-      }
-    }
-  })
-end, opts)
