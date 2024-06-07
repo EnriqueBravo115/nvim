@@ -31,7 +31,7 @@ vim.opt.updatetime = 50
 
 vim.opt.colorcolumn = "80"
 
-vim.cmd("highlight ColorColumn guibg=#393e48")
-vim.cmd("highlight EndOfBuffer guifg=#282a2e")
+vim.cmd("highlight ColorColumn guibg=#3b4252")
+vim.cmd("highlight EndOfBuffer guifg=#2e3440")
 
 vim.cmd("let g:powerline_loaded = 1")
