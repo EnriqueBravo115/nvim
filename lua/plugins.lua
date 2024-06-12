@@ -11,29 +11,11 @@ return require("packer").startup(function(use)
   use { "stevearc/dressing.nvim" }
   use "HiPhish/rainbow-delimiters.nvim"
   use "joerdav/templ.vim"
-  use "rose-pine/neovim"
   use "EdenEast/nightfox.nvim"
-
-  use {
-    'cameron-wags/rainbow_csv.nvim',
-    config = function()
-        require 'rainbow_csv'.setup()
-    end,
-    -- optional lazy-loading below
-    module = {
-        'rainbow_csv',
-        'rainbow_csv.fns'
-    },
-    ft = {
-        'csv',
-        'tsv',
-        'csv_semicolon',
-        'csv_whitespace',
-        'csv_pipe',
-        'rfc_csv',
-        'rfc_semicolon'
-    }
-}
+  use "rebelot/kanagawa.nvim"
+  use "lunarvim/horizon.nvim"
+  use "folke/tokyonight.nvim"
+  use "bluz71/vim-moonfly-colors"
 
   use {
     "windwp/nvim-autopairs",
@@ -42,6 +24,7 @@ return require("packer").startup(function(use)
       require("nvim-autopairs").setup {}
     end
   }
+
   use {
     "nvim-lualine/lualine.nvim",
     requires = { "nvim-tree/nvim-web-devicons", opt = true }
