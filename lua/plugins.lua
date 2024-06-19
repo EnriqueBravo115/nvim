@@ -16,6 +16,7 @@ return require("packer").startup(function(use)
   use "lunarvim/horizon.nvim"
   use "folke/tokyonight.nvim"
   use "bluz71/vim-moonfly-colors"
+  use { "ellisonleao/gruvbox.nvim" }
 
   use {
     "windwp/nvim-autopairs",

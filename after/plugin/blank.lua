@@ -20,7 +20,7 @@ hooks.register(hooks.type.HIGHLIGHT_SETUP, function()
 end)
 
 require("ibl").setup {
-  indent = { char = "│", highlight = highlight},
+  indent = { char = "│"},
   whitespace = {
     remove_blankline_trail = true,
   },
