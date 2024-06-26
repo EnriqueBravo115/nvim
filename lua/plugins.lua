@@ -11,12 +11,7 @@ return require("packer").startup(function(use)
   use { "stevearc/dressing.nvim" }
   use "HiPhish/rainbow-delimiters.nvim"
   use "joerdav/templ.vim"
-  use "EdenEast/nightfox.nvim"
-  use "rebelot/kanagawa.nvim"
-  use "lunarvim/horizon.nvim"
-  use "folke/tokyonight.nvim"
-  use "bluz71/vim-moonfly-colors"
-  use { "ellisonleao/gruvbox.nvim" }
+  use {"akinsho/horizon.nvim", tag = "*"}
 
   use {
     "windwp/nvim-autopairs",
@@ -67,6 +62,9 @@ return require("packer").startup(function(use)
   -- LANG
   use "mfussenegger/nvim-jdtls"
   use "leoluz/nvim-dap-go"
+  use "clojure-vim/vim-jack-in"
+  use "tpope/vim-dispatch"
+  use 'Olical/conjure'
 
   use {
     "VonHeikemen/lsp-zero.nvim",
