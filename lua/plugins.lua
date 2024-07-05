@@ -11,7 +11,7 @@ return require("packer").startup(function(use)
   use { "stevearc/dressing.nvim" }
   use "HiPhish/rainbow-delimiters.nvim"
   use "joerdav/templ.vim"
-  use {"akinsho/horizon.nvim", tag = "*"}
+  use { "akinsho/horizon.nvim", tag = "*" }
 
   use {
     "windwp/nvim-autopairs",
@@ -78,7 +78,6 @@ return require("packer").startup(function(use)
         end,
       },
       { "williamboman/mason-lspconfig.nvim" },
-
       { "hrsh7th/nvim-cmp" },
       { "hrsh7th/cmp-nvim-lsp" },
       { "L3MON4D3/LuaSnip" },
