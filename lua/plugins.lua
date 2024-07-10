@@ -12,14 +12,7 @@ return require("packer").startup(function(use)
   use "HiPhish/rainbow-delimiters.nvim"
   use "joerdav/templ.vim"
   use { "akinsho/horizon.nvim", tag = "*" }
-
-  use {
-    "windwp/nvim-autopairs",
-    event = "InsertEnter",
-    config = function()
-      require("nvim-autopairs").setup {}
-    end
-  }
+  use "jiangmiao/auto-pairs"
 
   use {
     "nvim-lualine/lualine.nvim",
