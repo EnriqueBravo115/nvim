@@ -331,6 +331,11 @@ _G.packer_plugins = {
     path = "/home/nullboy/.local/share/nvim/site/pack/packer/start/vim-jack-in",
     url = "https://github.com/clojure-vim/vim-jack-in"
   },
+  ["vim-surround"] = {
+    loaded = true,
+    path = "/home/nullboy/.local/share/nvim/site/pack/packer/start/vim-surround",
+    url = "https://github.com/tpope/vim-surround"
+  },
   ["vim-vsnip"] = {
     loaded = true,
     path = "/home/nullboy/.local/share/nvim/site/pack/packer/start/vim-vsnip",

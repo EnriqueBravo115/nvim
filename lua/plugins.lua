@@ -38,6 +38,7 @@ return require("packer").startup(function(use)
   use "vimwiki/vimwiki"
   use "theprimeagen/harpoon"
   use "mbbill/undotree"
+  use "tpope/vim-surround"
 
   use { "kristijanhusak/vim-dadbod-ui",
     requires = { "tpope/vim-dadbod",
@@ -57,7 +58,7 @@ return require("packer").startup(function(use)
   use "leoluz/nvim-dap-go"
   use "clojure-vim/vim-jack-in"
   use "tpope/vim-dispatch"
-  use 'Olical/conjure'
+  use "Olical/conjure"
 
   use {
     "VonHeikemen/lsp-zero.nvim",
@@ -79,9 +80,9 @@ return require("packer").startup(function(use)
       { "hrsh7th/cmp-buffer" },
       { "hrsh7th/cmp-vsnip" },
       { "hrsh7th/vim-vsnip" },
-      { 'saadparwaiz1/cmp_luasnip' },
-      { 'hrsh7th/cmp-nvim-lua' },
-      { 'rafamadriz/friendly-snippets' },
+      { "saadparwaiz1/cmp_luasnip" },
+      { "hrsh7th/cmp-nvim-lua" },
+      { "rafamadriz/friendly-snippets" },
     }
   }
 end)

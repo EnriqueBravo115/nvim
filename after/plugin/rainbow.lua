@@ -6,14 +6,14 @@ vim.cmd("highlight RainbowDelimiterGreen guifg=#36c692")
 vim.cmd("highlight RainbowDelimiterViolet guifg=#ae81ff")
 vim.cmd("highlight RainbowDelimiterCyan guifg=#79dac8")
 
-require 'rainbow-delimiters.setup'.setup {
+require "rainbow-delimiters.setup".setup {
   highlight = {
-    'RainbowDelimiterRed',
-    'RainbowDelimiterYellow',
-    'RainbowDelimiterBlue',
-    'RainbowDelimiterOrange',
-    'RainbowDelimiterGreen',
-    'RainbowDelimiterViolet',
-    'RainbowDelimiterCyan',
+    "RainbowDelimiterRed",
+    "RainbowDelimiterYellow",
+    "RainbowDelimiterBlue",
+    "RainbowDelimiterOrange",
+    "RainbowDelimiterGreen",
+    "RainbowDelimiterViolet",
+    "RainbowDelimiterCyan",
   },
 }
