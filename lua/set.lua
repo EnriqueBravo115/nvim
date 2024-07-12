@@ -26,8 +26,8 @@ vim.opt.signcolumn = "yes"
 
 vim.opt.updatetime = 50
 
---vim.opt.conceallevel = 2
---vim.cmd("set concealcursor=nc")
+vim.opt.conceallevel = 2
+vim.cmd("set concealcursor=nc")
 
 vim.opt.colorcolumn = "80"
 
