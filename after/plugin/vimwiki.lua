@@ -1,12 +1,13 @@
 --vim.cmd("autocmd FileType vimwiki set norelativenumber")
 --vim.cmd("autocmd FileType vimwiki set nonumber")
-vim.g.vimwiki_list = {
-    { path = '/home/nullboy/Documents/notes/' }
-}
+
+vim.cmd("let g:mkdp_highlight_css='/home/nullboy/Documents/notes/my.css'")
+vim.cmd("let g:mkdp_theme='light'")
+vim.cmd("let g:mkdp_page_title = '${name}'")
 
 vim.cmd("hi VimwikiBold guifg=#E76D83 gui=bold")
 vim.cmd("hi VimwikiItalic guifg=#ae81ff gui=italic")
-vim.cmd("hi VimwikiCode guifg=#36c692")
+vim.cmd("hi VimwikiCode guifg=#09F7A0")
 vim.cmd("hi VimwikiLink guifg=#78c2b3 gui=underline")
 vim.cmd("hi VimwikiList guifg=#fd9353")
 

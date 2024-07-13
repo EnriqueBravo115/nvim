@@ -13,6 +13,10 @@ return require("packer").startup(function(use)
   use "joerdav/templ.vim"
   use { "akinsho/horizon.nvim", tag = "*" }
   use "jiangmiao/auto-pairs"
+  use({
+    "iamcco/markdown-preview.nvim",
+    run = function() vim.fn["mkdp#util#install"]() end,
+  })
 
   use {
     "nvim-lualine/lualine.nvim",
