@@ -4,6 +4,7 @@
 vim.cmd("let g:mkdp_highlight_css='/home/nullboy/Documents/notes/my.css'")
 vim.cmd("let g:mkdp_theme='light'")
 vim.cmd("let g:mkdp_page_title = '${name}'")
+vim.cmd("let g:vimwiki_list=[{'path': '/home/nullboy/Documents/notes/', 'syntax': 'markdown', 'ext': '.md'}]")
 
 vim.cmd("hi VimwikiBold guifg=#E76D83 gui=bold")
 vim.cmd("hi VimwikiItalic guifg=#ae81ff gui=italic")

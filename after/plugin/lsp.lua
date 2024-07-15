@@ -72,7 +72,6 @@ cmp.setup({
   },
 })
 
-require 'lspconfig'.kotlin_language_server.setup {}
 require 'lspconfig'.templ.setup {}
 
 vim.api.nvim_set_hl(0, "CmpItemKindClass", { fg = "#ffa14f" })
