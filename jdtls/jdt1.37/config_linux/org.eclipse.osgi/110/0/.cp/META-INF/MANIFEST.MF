@@ -1,0 +1,64 @@
+Manifest-Version: 1.0
+Created-By: Maven Archiver 3.6.0
+Build-Jdk-Spec: 17
+Automatic-Module-Name: org.eclipse.jdt.junit5.runtime
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-Vendor: %providerName
+Bundle-SymbolicName: org.eclipse.jdt.junit5.runtime;singleton:=true
+Bundle-Version: 1.1.100.v20220907-0450
+Bundle-Localization: plugin
+Export-Package: org.eclipse.jdt.internal.junit5.runner;x-internal:=true
+Require-Bundle: org.eclipse.jdt.junit.runtime;bundle-version="[3.5.0,4.0
+ .0)",junit-jupiter-api;bundle-version="5.4.0",junit-jupiter-engine;bund
+ le-version="5.4.0",junit-jupiter-migrationsupport;bundle-version="5.4.0
+ ",junit-jupiter-params;bundle-version="5.4.0",junit-vintage-engine;bund
+ le-version="5.4.0",org.opentest4j;bundle-version="1.1.1",junit-platform
+ -commons;bundle-version="1.4.0",junit-platform-engine;bundle-version="1
+ .4.0",junit-platform-launcher;bundle-version="1.4.0",junit-platform-run
+ ner;bundle-version="1.4.0",junit-platform-suite-api;bundle-version="1.4
+ .0",junit-platform-suite-commons;bundle-version="1.8.1",junit-platform-
+ suite-engine;bundle-version="1.8.1",org.apiguardian.api;bundle-version=
+ "1.0.0",org.junit;bundle-version="4.12.0"
+Bundle-RequiredExecutionEnvironment: JavaSE-11
+Eclipse-SourceReferences: scm:git:https://github.com/eclipse-jdt/eclipse
+ .jdt.ui.git;path="org.eclipse.jdt.junit5.runtime";tag="I20220907-1800";
+ commitId=c28bbf5bd0cdc3b6a9c6027bcaf81fa84be302e8
+
+Name: org/eclipse/jdt/internal/junit5/runner/JUnit5TestListener$IgnoredT
+ estIdentifier.class
+SHA-256-Digest: VKLWNIo2SIZMuPd/LgUdqqlWoEIalNNEBlmlZVlSO3M=
+
+Name: about.html
+SHA-256-Digest: 7mbS+ztMDS7S5/aYvJ7U49bPd/pcr0CtAylhJdsaxfA=
+
+Name: org/eclipse/jdt/internal/junit5/runner/FailuresFirstMethodOrderer$
+ 1.class
+SHA-256-Digest: KKS5LMc+qRosRkypVtApYdcBt7S+E4SITXG3m85bx3E=
+
+Name: org/eclipse/jdt/internal/junit5/runner/JUnit5TestListener$Assumpti
+ onFailedTestIdentifier.class
+SHA-256-Digest: ZqhjNVAwwwQxAz8zM4wBaWyOSUEuBmIUGAT/WKa4Ryg=
+
+Name: org/eclipse/jdt/internal/junit5/runner/FailuresFirstMethodOrderer.
+ class
+SHA-256-Digest: UDVaSxanvFkS3QZSzg5cNgJpEuF568+/tfweNkWWwVg=
+
+Name: plugin.properties
+SHA-256-Digest: aixG9p2PqgGyofsY3Kc8DJ35qmEQ9mny7U4UvVJ+kQQ=
+
+Name: .api_description
+SHA-256-Digest: q6wDUQMAzqDKGe34dBXyIjMcvLQcf1Hd4gfiQsrr1ic=
+
+Name: org/eclipse/jdt/internal/junit5/runner/JUnit5TestLoader.class
+SHA-256-Digest: 5FzYu0SMQ1+rDdthNEPhlTCUt6F73MSNrWzW52rpRT4=
+
+Name: org/eclipse/jdt/internal/junit5/runner/JUnit5TestReference.class
+SHA-256-Digest: vze3Ehqtq/FAPBCyQ2+UuyqL5VNBM2VmsVk6btUpQzo=
+
+Name: org/eclipse/jdt/internal/junit5/runner/JUnit5TestListener.class
+SHA-256-Digest: Lij5fDc5lRhOBPYSqH26lPC+jlcXIaqluaJ1Lww+hDE=
+
+Name: org/eclipse/jdt/internal/junit5/runner/JUnit5Identifier.class
+SHA-256-Digest: YlqFk7RneyVflM9rOVY5UoqHyNOBhjDs7gKCpPjwnT0=
+

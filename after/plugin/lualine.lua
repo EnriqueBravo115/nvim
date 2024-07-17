@@ -29,7 +29,7 @@ local powerline = {
 
 require("lualine").setup {
   options = {
-    theme = powerline,
+    theme = "auto",
     component_separators = "",
     section_separators = { left = "", right = "" },
     always_divide_middle = false,
@@ -50,7 +50,7 @@ require("lualine").setup {
       { "filetype", icon_only = true }
     },
     lualine_y = {
-      { "fileformat", symbols = { dos = " ", unix = "󰣇 " } }
+      { "fileformat", symbols = { dos = " ", unix = " " } }
     },
     lualine_z = {
       { "location" }

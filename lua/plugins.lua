@@ -12,11 +12,14 @@ return require("packer").startup(function(use)
   use "HiPhish/rainbow-delimiters.nvim"
   use "joerdav/templ.vim"
   use { "akinsho/horizon.nvim", tag = "*" }
+  use "bluz71/vim-moonfly-colors"
+  use { "ellisonleao/gruvbox.nvim" }
   use "jiangmiao/auto-pairs"
   use({
     "iamcco/markdown-preview.nvim",
     run = function() vim.fn["mkdp#util#install"]() end,
   })
+
 
   use {
     "nvim-lualine/lualine.nvim",
