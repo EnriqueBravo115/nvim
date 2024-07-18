@@ -34,7 +34,7 @@ require("nvim-tree").setup({
 vim.cmd("highlight NvimTreeFolderIcon guifg=#ff7ab2")
 vim.cmd("highlight NvimTreeIndentMarker guifg=#fd9353")
 
-vim.cmd("highlight NvimTreeNormal guibg=#282828")
-vim.cmd("highlight NvimTreeEndOfBuffer guifg=#282828")
-vim.cmd("highlight NvimTreeCursorColumn guifg=#282828")
-vim.cmd("highlight NvimTreeWinSeparator guifg=#282828")
+vim.cmd("highlight NvimTreeNormal guibg=#282c34")
+vim.cmd("highlight NvimTreeEndOfBuffer guifg=#282c34")
+vim.cmd("highlight NvimTreeCursorColumn guifg=#282c34")
+vim.cmd("highlight NvimTreeWinSeparator guifg=#282c34")

@@ -19,7 +19,8 @@ return require("packer").startup(function(use)
     "iamcco/markdown-preview.nvim",
     run = function() vim.fn["mkdp#util#install"]() end,
   })
-
+  -- Using Packer
+  use 'navarasu/onedark.nvim'
 
   use {
     "nvim-lualine/lualine.nvim",
